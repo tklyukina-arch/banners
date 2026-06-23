@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 155 53.4000015">
+  <!-- Generator: Adobe Illustrator 30.4.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 226)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        fill: #eaff50;
+      }
+
+      .st2 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" y="14.9278489" width="155" height="23.5443038"/>
+    </clipPath>
+  </defs>
+  <g class="st2">
+    <g>
+      <path class="st1" d="M80.3616063,24.1377908h7.0819246v-9.2101365h5.0375096v23.5443038h-5.0375096v-9.2227966h-7.0819246v9.2227966h-5.0364917V14.9276543h5.0364917v9.2101365Z"/>
+      <path class="st1" d="M113.5394615,27.1140863v-3.5627423c0-.0707326-.0039518-.1414652-.0049099-.2122913h-.0019759c-.1520258-4.6710931-3.9240506-8.4113984-8.5573356-8.4113984-4.6343028,0-8.4053097,3.7403054-8.5573955,8.4113984h-.0019759c-.000958.0708261-.003892.1415587-.003892.2122913v3.5627423c-.0049099.0094193-.0078438.0172668-.0127536.0266824v11.3296177h5.0384676v-6.1349591h7.0789907v6.1349591h5.0394855v-11.3296177c-.0049099-.0094155-.0079037-.0172631-.0127536-.0266824h-.0039518ZM108.5137476,27.2288653h-7.0800086v-3.3378957h.0059277v-.3758246c.0244894-1.7026488,1.4881646-3.246663,3.1323667-3.4478697.0421529-.0047078.0823897-.0094155.1246025-.0125553.0137117,0,.0274233-.0031398.040177-.0031398.0667022-.0047078.1344222-.0062795.2011244-.0062795.0127536,0,.0235314.0015718.035327.0015718.0127536,0,.0235314-.0015718.036285-.0015718.0677201,0,.1344222.0015718.2011244.0062795.0137117,0,.0284412.0031398.0402368.0031398.0421529.0031398.0823897.0078475.1245426.0125553,1.6442021.2012067,3.1078773,1.7467926,3.1323667,3.4478697v.3758246h.0059277v3.3378957Z"/>
+      <path class="st1" d="M154.9872464,27.1140863v-3.5627423c0-.0707326-.0029339-.1414652-.0049099-.2122913h-.000958c-.1540616-4.6710931-3.9250685-8.4113984-8.5593714-8.4113984s-8.4062678,3.7403054-8.5573356,8.4113984h-.0019759c-.0019759.0708261-.0049099.1415587-.0049099.2122913v3.5627423c-.0039518.0094193-.0078438.0172668-.0117956.0266824v11.3296177h5.0385275v-6.1349591h7.0789907v6.1349591h5.0394256v-11.3296177c-.0049099-.0094155-.0078438-.0172631-.0127536-.0266824h-.0029339ZM149.9624904,27.2288653h-7.0809666v-3.3378957h.0059277v-.3758246c.0255073-1.7026488,1.4881646-3.246663,3.1333247-3.4478697.0411949-.0047078.0814317-.0094155.1236445-.0125553.0137117,0,.0274233-.0031398.040177-.0031398.0667022-.0047078.1353802-.0062795.2011244-.0062795.0127536,0,.0235314.0015718.036285.0015718.0117956,0,.0235912-.0015718.035327-.0015718.0686781,0,.1353802.0015718.2020824.0062795.0137715,0,.0274832.0031398.0402368.0031398.0411949.0031398.0814317.0078475.1235846.0125553,1.6442021.2012067,3.1078773,1.7467926,3.1323667,3.4478697v.3758246h.0068858v3.3378957Z"/>
+      <path class="st1" d="M64.3475805,14.9276543c-3.8995612,0-7.0603692,3.2057526-7.0603692,7.161489v9.2212248c0,1.1366984-.9074247,2.0580668-2.0287275,2.0580668-1.1203447,0-2.0287275-.9213684-2.0287275-2.0580668V14.9276543h-5.0316417v16.3811458c0,3.9557364,3.1608678,7.1615863,7.0603692,7.1615863,3.9005193,0,6.889662-3.037605,7.0525254-6.8456043h.0078438v-9.5356388c0-1.1366984.9083828-2.0580668,2.0287275-2.0580668,1.1213027,0,2.0296855.9213684,2.0296855,2.0580668v16.3812431h5.0306238v-16.3812431c0-3.9557364-3.1598499-7.161489-7.0603093-7.161489Z"/>
+      <path class="st1" d="M11.6681468,14.9275532C5.2346821,14.9275532,0,20.1788173,0,26.6344699s5.2346821,11.8358191,11.6681468,11.8358191c6.4344826,0,11.5416283-5.3094376,11.5416283-11.8358191,0-6.5263852-5.1767818-11.7069167-11.5416283-11.7069167ZM11.590667,33.346363c-3.5522789,0-6.5531574-3.0438883-6.5531574-6.64744,0-3.6035555,3.0008784-6.6772621,6.5531574-6.6772621,1.7393455,0,3.3883976.6995568,4.6411886,1.9699701,1.2517731,1.2704096,1.9414279,2.9432326,1.9414279,4.707292,0,3.6035517-3.01465,6.64744-6.5826165,6.64744Z"/>
+      <path class="st1" d="M44.2858597,16.3803347v-1.4526804l-5.0414015.003136v1.4526842c0,1.259426-.2404032,2.4778443-.7397113,3.6271954-.500326,1.1524945-.7798883,1.5360731-1.6745594,2.3740526-.6180428.5864506-1.9041848,1.3018035-2.2357796,1.4276671-.325667.1241983-1.1026213.363172-2.4319342.363172v-9.2479072h-5.0423596v23.5443038h5.0423596v-9.1834579c1.5451069,0,3.0098-.366409,3.7151424-.630497.4433837-.165105.9387999-.3915196,1.2350676-.5408323.5934935.6194124,1.1948907,1.5014421,1.4833146,2.2435785.3041115.7845137.6621716,1.889822.6621716,3.5312511v4.5815294h5.0296658v-4.5815294c0-1.773475-.3787174-3.4668018-1.1252546-5.0359303-.5424789-1.1398382-1.2468633-2.1586215-2.0974055-3.0437873.9986762-1.1634818,1.6892889-2.4181964,2.3014638-3.8394866.6121749-1.421294.9211963-3.6680085.9211963-5.5893217l-.0019759-.0031398Z"/>
+      <path class="st1" d="M133.1518709,27.0874039l-.253097-.3206935.251121-.3239306c1.6334244-2.1035878,1.9423859-5.1678789.7691106-7.6253129-1.1811191-2.4731328-3.6385606-3.8912871-6.7385343-3.8912871h-9.7100734v23.5458755h9.7100734c3.123505,0,5.5868144-1.4212903,6.7601496-3.9008037,1.1448341-2.4212351.828927-5.4273527-.78875-7.4822798v-.001568ZM128.9227507,32.7852214c-.4473954.3883836-1.0673542.5927301-1.791378.5927301l-4.6234652-.0078513v-4.1082824h4.6283751c1.6118091.001568,2.4535495,1.097457,2.4535495,2.0989736,0,.5392643-.2433371,1.0581221-.6670814,1.4260018v-.0015718ZM128.9325106,23.59078c-.4493115.4103582-1.0555586.5612352-1.7854502.5612352h-4.6411287v-4.1333968h4.6235251c1.6137251,0,2.4583995,1.0565503,2.4583995,2.0989736,0,.5549594-.2383674,1.0910839-.6553457,1.4716163v.0015718Z"/>
+    </g>
+  </g>
+  <metadata>
+    <sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/">
+      <slices/>
+      <sliceSourceBounds x="0.28" y="14.93" width="155" height="23.55" bottomLeftOrigin="true"/>
+    </sfw>
+  </metadata>
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 10.0-c000 1.000000, 0000/00/00-00:00:00        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#"
+            xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"
+            xmlns:illustrator="http://ns.adobe.com/illustrator/1.0/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:xmpGImg="http://ns.adobe.com/xap/1.0/g/img/"
+            xmlns:xmpTPg="http://ns.adobe.com/xap/1.0/t/pg/"
+            xmlns:stDim="http://ns.adobe.com/xap/1.0/sType/Dimensions#"
+            xmlns:xmpG="http://ns.adobe.com/xap/1.0/g/">
+         <xmpMM:RenditionClass>default</xmpMM:RenditionClass>
+         <xmpMM:DerivedFrom rdf:parseType="Resource">
+            <stRef:renditionClass>default</stRef:renditionClass>
+         </xmpMM:DerivedFrom>
+         <xmpMM:DocumentID>xmp.did:081c7295-76f8-40bf-bd99-3867d8c25ca5</xmpMM:DocumentID>
+         <xmpMM:InstanceID>xmp.iid:081c7295-76f8-40bf-bd99-3867d8c25ca5</xmpMM:InstanceID>
+         <xmpMM:OriginalDocumentID>xmp.did:081c7295-76f8-40bf-bd99-3867d8c25ca5</xmpMM:OriginalDocumentID>
+         <xmpMM:History>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:081c7295-76f8-40bf-bd99-3867d8c25ca5</stEvt:instanceID>
+                  <stEvt:when>2026-06-23T10:22:02+03:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Illustrator 30.4 (Macintosh)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+            </rdf:Seq>
+         </xmpMM:History>
+         <illustrator:CreatorSubTool>Adobe Illustrator</illustrator:CreatorSubTool>
+         <dc:format>image/svg+xml</dc:format>
+         <xmp:CreatorTool>Adobe Illustrator 30.4 (Macintosh)</xmp:CreatorTool>
+         <xmp:CreateDate>2026-06-23T10:22:02+03:00</xmp:CreateDate>
+         <xmp:Thumbnails>
+            <rdf:Alt>
+               <rdf:li rdf:parseType="Resource">
+                  <xmpGImg:width>256</xmpGImg:width>
+                  <xmpGImg:height>40</xmpGImg:height>
+                  <xmpGImg:format>JPEG</xmpGImg:format>
+                  <xmpGImg:image>/9j/4AAQSkZJRgABAgEAAAAAAAD/7QAsUGhvdG9zaG9wIDMuMAA4QklNA+0AAAAAABAAAAAAAAEA&#xA;AQAAAAAAAQAB/+4ADkFkb2JlAGTAAAAAAf/bAIQABgQEBAUEBgUFBgkGBQYJCwgGBggLDAoKCwoK&#xA;DBAMDAwMDAwQDA4PEA8ODBMTFBQTExwbGxscHx8fHx8fHx8fHwEHBwcNDA0YEBAYGhURFRofHx8f&#xA;Hx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8f/8AAEQgAKAEAAwER&#xA;AAIRAQMRAf/EAaIAAAAHAQEBAQEAAAAAAAAAAAQFAwIGAQAHCAkKCwEAAgIDAQEBAQEAAAAAAAAA&#xA;AQACAwQFBgcICQoLEAACAQMDAgQCBgcDBAIGAnMBAgMRBAAFIRIxQVEGE2EicYEUMpGhBxWxQiPB&#xA;UtHhMxZi8CRygvElQzRTkqKyY3PCNUQnk6OzNhdUZHTD0uIIJoMJChgZhJRFRqS0VtNVKBry4/PE&#xA;1OT0ZXWFlaW1xdXl9WZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3OEhYaHiImKi4yNjo+Ck5SVlpeYmZ&#xA;qbnJ2en5KjpKWmp6ipqqusra6voRAAICAQIDBQUEBQYECAMDbQEAAhEDBCESMUEFURNhIgZxgZEy&#xA;obHwFMHR4SNCFVJicvEzJDRDghaSUyWiY7LCB3PSNeJEgxdUkwgJChgZJjZFGidkdFU38qOzwygp&#xA;0+PzhJSktMTU5PRldYWVpbXF1eX1RlZmdoaWprbG1ub2R1dnd4eXp7fH1+f3OEhYaHiImKi4yNjo&#xA;+DlJWWl5iZmpucnZ6fkqOkpaanqKmqq6ytrq+v/aAAwDAQACEQMRAD8A9SXFwkKVO7H7K+OYOv18&#xA;NPCzvI8gkBLJbqaU/E1B/KNhnGantHNmPqlt3DYMqUswgaSiIL2aM7nmvcH+ubTR9r5sJ3PFHuP6&#xA;CghM4pEkQOpqDnZ6fURzQE48iwQup/3S/wCt/DNN7Rf3Uf636Cyioad/vQf9U/wzV9gf4x/mn9CZ&#xA;JnnaMEkkblIzDuSc81zz4pyI6ktiaxClov8AqfwzutMK0kf6n6GHVKM4BmnpIAJOwG5z06UgBZ5B&#xA;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&#xA;/9k=</xmpGImg:image>
+               </rdf:li>
+            </rdf:Alt>
+         </xmp:Thumbnails>
+         <xmp:MetadataDate>2026-06-23T10:22:02+03:00</xmp:MetadataDate>
+         <xmp:ModifyDate>2026-06-23T10:22:02+03:00</xmp:ModifyDate>
+         <xmpTPg:MaxPageSize rdf:parseType="Resource">
+            <stDim:w>155.000000</stDim:w>
+            <stDim:h>53.400002</stDim:h>
+            <stDim:unit>Pixels</stDim:unit>
+         </xmpTPg:MaxPageSize>
+         <xmpTPg:NPages>1</xmpTPg:NPages>
+         <xmpTPg:HasVisibleTransparency>False</xmpTPg:HasVisibleTransparency>
+         <xmpTPg:HasVisibleOverprint>False</xmpTPg:HasVisibleOverprint>
+         <xmpTPg:PlateNames>
+            <rdf:Seq>
+               <rdf:li>Cyan</rdf:li>
+               <rdf:li>Yellow</rdf:li>
+            </rdf:Seq>
+         </xmpTPg:PlateNames>
+         <xmpTPg:SwatchGroups>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <xmpG:groupName>Default Swatch Group</xmpG:groupName>
+                  <xmpG:groupType>0</xmpG:groupType>
+               </rdf:li>
+            </rdf:Seq>
+         </xmpTPg:SwatchGroups>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?>
+  </metadata>
+</svg>
