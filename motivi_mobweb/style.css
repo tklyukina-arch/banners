@@ -1,0 +1,347 @@
+@font-face {
+  font-family: "TT-Norms-Pro-Regular";
+  src: url("fonts/TT-Norms-Pro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT-Norms-Pro-Bold";
+  src: url("fonts/TT-Norms-Pro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --banner-width: 320px;
+  --banner-height: 60px;
+  --cycle-duration: 12s;
+
+  --frame-1-bg: #eaff50;
+  --frame-2-bg: #d9d9d9;
+  --border-color: #eaff50;
+
+  --side-gap: 4px;
+  --content-radius: 8px;
+  --title-width: 86px;
+  --title-height: 52px;
+  --left-width: 169px;
+  --left-height: 52px;
+  --photo-width: 135px;
+  --photo-height: 52px;
+  --photo-left: 117px;
+  --logo-width: 58px;
+  --logo-height: 20px;
+  --green-width: 190px;
+  --arrow-width: 20px;
+
+  --ease-out-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "TT-Norms-Pro-Regular", Arial, sans-serif;
+}
+
+.click-area {
+  position: relative;
+  width: 100%;
+  height: var(--banner-height);
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--frame-1-bg);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  animation: clickAreaBg var(--cycle-duration) linear infinite;
+}
+
+.banner {
+  position: relative;
+  width: var(--banner-width);
+  height: var(--banner-height);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.frame {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.photo {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: 1;
+  width: var(--photo-width);
+  height: var(--photo-height);
+  object-fit: cover;
+  border-radius: var(--content-radius);
+  opacity: 0;
+  transform: translateY(calc(-50% + 8px));
+  animation: photoMotion var(--cycle-duration) infinite both;
+}
+
+.title-card {
+  position: absolute;
+  left: var(--side-gap);
+  top: 50%;
+  z-index: 2;
+  width: var(--title-width);
+  height: var(--title-height);
+  padding: 9px 10px;
+  display: flex;
+  align-items: center;
+  background: #000000;
+  border-radius: var(--content-radius);
+  opacity: 0;
+  transform: translate(-12px, -50%);
+  animation: titleCardMotion var(--cycle-duration) infinite both;
+}
+
+.title-text {
+  color: #ffffff;
+  font-family: "TT-Norms-Pro-Bold", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  white-space: normal;
+}
+
+.left-object {
+  position: absolute;
+  left: var(--side-gap);
+  top: 50%;
+  z-index: 2;
+  width: var(--left-width);
+  height: var(--left-height);
+  opacity: 0;
+  transform: translate(-12px, -50%);
+  animation: titleCardMotion var(--cycle-duration) infinite both;
+}
+
+.logo {
+  position: absolute;
+  right: calc(var(--side-gap) + 4px);
+  top: calc(50% + 12px);
+  z-index: 2;
+  width: var(--logo-width);
+  height: auto;
+  max-height: var(--logo-height);
+  opacity: 0;
+  transform: translateY(calc(-50% + 6px));
+  animation: logoMotion var(--cycle-duration) infinite both;
+}
+
+.green-object {
+  position: absolute;
+  left: var(--side-gap);
+  bottom: 0;
+  z-index: 1;
+  width: var(--green-width);
+  height: auto;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: greenMotion var(--cycle-duration) infinite both;
+}
+
+.disclaimer {
+  position: absolute;
+  right: var(--side-gap);
+  top: 50%;
+  z-index: 2;
+  width: 142px;
+  color: #000000;
+  font-family: "TT-Norms-Pro-Regular", Arial, sans-serif;
+  font-size: 7pt;
+  line-height: 1.05;
+  text-align: right;
+  letter-spacing: -0.02em;
+  opacity: 0;
+  transform: translateY(-50%) translateY(6px);
+  animation: disclaimerMotion var(--cycle-duration) infinite both;
+}
+
+.cursor-arrow {
+  position: absolute;
+  /* Нижняя правая часть чёрного овала на mobile-версии green.svg */
+  left: 164px;
+  bottom: 2px;
+  z-index: 3;
+  width: var(--arrow-width);
+  height: auto;
+  opacity: 0;
+  transform: translate(14px, 12px) scale(1);
+  transform-origin: 80% 80%;
+  animation: cursorArrowMotion var(--cycle-duration) infinite both;
+}
+
+@keyframes clickAreaBg {
+  0%,
+  52.5% {
+    background-color: var(--frame-1-bg);
+  }
+
+  56.667%,
+  94.167% {
+    background-color: var(--frame-2-bg);
+  }
+
+  100% {
+    background-color: var(--frame-1-bg);
+  }
+}
+
+@keyframes photoMotion {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(-50% + 8px));
+    animation-timing-function: var(--ease-out-smooth);
+  }
+
+  5.833%,
+  46.667% {
+    opacity: 1;
+    transform: translateY(-50%);
+    animation-timing-function: var(--ease-out-smooth);
+  }
+
+  52.5%,
+  100% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes titleCardMotion {
+  0%,
+  7.917% {
+    opacity: 0;
+    transform: translate(-12px, -50%);
+    animation-timing-function: var(--ease-out-back);
+  }
+
+  14.167%,
+  46.667% {
+    opacity: 1;
+    transform: translate(0, -50%);
+    animation-timing-function: var(--ease-out-smooth);
+  }
+
+  52.5%,
+  100% {
+    opacity: 0;
+    transform: translate(0, -50%);
+  }
+}
+
+@keyframes logoMotion {
+  0%,
+  16.25% {
+    opacity: 0;
+    transform: translateY(calc(-50% + 6px));
+    animation-timing-function: var(--ease-out-smooth);
+  }
+
+  21.667%,
+  46.667% {
+    opacity: 1;
+    transform: translateY(-50%);
+    animation-timing-function: var(--ease-out-smooth);
+  }
+
+  52.5%,
+  100% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes greenMotion {
+  0%,
+  56.667% {
+    opacity: 0;
+    transform: translateY(10px);
+    animation-timing-function: var(--ease-out-back);
+  }
+
+  62.917%,
+  94.167% {
+    opacity: 1;
+    transform: translateY(0);
+    animation-timing-function: var(--ease-out-smooth);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+@keyframes disclaimerMotion {
+  0%,
+  65% {
+    opacity: 0;
+    transform: translateY(-50%) translateY(6px);
+    animation-timing-function: var(--ease-out-smooth);
+  }
+
+  70.417%,
+  94.167% {
+    opacity: 1;
+    transform: translateY(-50%) translateY(0);
+    animation-timing-function: var(--ease-out-smooth);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50%) translateY(0);
+  }
+}
+
+@keyframes cursorArrowMotion {
+  0%,
+  71.667% {
+    opacity: 0;
+    transform: translate(36px, 34px) scale(1);
+    animation-timing-function: var(--ease-out-back);
+  }
+
+  77.5% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+    animation-timing-function: var(--ease-out-smooth);
+  }
+
+  79.583% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.94);
+    animation-timing-function: var(--ease-out-smooth);
+  }
+
+  82.083%,
+  94.167% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+    animation-timing-function: var(--ease-out-smooth);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
