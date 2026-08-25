@@ -1,0 +1,1 @@
+window._bannerLayout={"id":"6a7f056be3105621d861e7ff","name":"","loopCount":-1,"isResponsive":true,"activeSlideId":0,"activeLayoutId":4,"layouts":[],"wasIndividualChanged":false,"feedId":"","feedRow":1};

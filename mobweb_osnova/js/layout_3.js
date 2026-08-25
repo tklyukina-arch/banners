@@ -1,0 +1,1 @@
+window._bannerLayout.layouts.push({"breakpointWidth":1920,"isDisabled":false,"scaleByWidth":true,"scaleByHeight":false,"canvas":{"background":{"type":"color","color":"#ff0022"},"height":700,"width":1920,"sizeId":"6a7f056be3105621d861e7f1","border":{"style":"solid","color":"#000000","width":1,"radius":0,"enabled":false}},"slides":[]});

@@ -1,0 +1,1 @@
+window._bannerLayout.layouts[2].slides.push({"duration":6700,"isDisabled":false,"isStop":false,"transition":{"duration":0,"animation":{"type":"none","route":"out","duration":1000,"buildRules":null}},"fallbackFrame":1500,"elements":[]});
