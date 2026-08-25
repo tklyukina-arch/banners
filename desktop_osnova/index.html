@@ -1,0 +1,98 @@
+<!-- This banner was made in deaz.io -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="ad.size" content="width=100%,height=700">
+  <meta name="ad.link" content="%ad.link%">
+  <meta name="ad.track" content="%ad.track%">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,minimum-scale=1,maximum-scale=1">
+  <meta name="ad.loopcount" content="-1">
+
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link rel="stylesheet" href="css/style.css">
+  <style>#scene { height: 700px; width: 1920px }
+#canvas { background: rgb(255, 0, 34) }
+#canvas { perspective: 2044px }</style>
+
+  <script nonce="%request.eid1%" type="text/javascript" src="https://banners.adfox.ru/files/adfox_HTML5.js"></script>
+  <script nonce="%request.eid1%">
+var flashVars = {
+  reference: "%request.reference%",
+  link: "%banner.user1%",
+  target: "%banner.target%",
+  rnd: parseInt("%request.place_random%") || parseInt("%system.random%"),
+  events: [
+      "",
+      "%banner.event1%",
+      "%banner.event2%",
+      "%banner.event3%",
+      "%banner.event4%",
+      "%banner.event5%",
+      "%banner.event6%",
+      "%banner.event7%",
+      "%banner.event8%",
+      "%banner.event9%",
+      "%banner.event10%",
+      "%banner.event11%",
+      "%banner.event12%",
+      "%banner.event13%",
+      "%banner.event14%",
+      "%banner.event15%",
+      "%banner.event16%",
+      "%banner.event17%",
+      "%banner.event18%",
+      "%banner.event19%",
+      "%banner.event20%",
+      "%banner.event21%",
+      "%banner.event22%",
+      "%banner.event23%",
+      "%banner.event24%",
+      "%banner.event25%",
+      "%banner.event26%",
+      "%banner.event27%",
+      "%banner.event28%",
+      "%banner.event29%",
+      "%banner.event30%"
+  ]
+};
+  </script>
+
+  <script nonce="%request.eid1%" src="js/layout_base.js"></script>
+  <script nonce="%request.eid1%" src="js/layout_1.js"></script>
+  <script nonce="%request.eid1%" src="js/layout_1_slide_1.js"></script>
+  <script nonce="%request.eid1%" src="js/layout_1_slide_1_elements_1.js"></script>
+  <script nonce="%request.eid1%" src="js/layout_2.js"></script>
+  <script nonce="%request.eid1%" src="js/layout_2_slide_1.js"></script>
+  <script nonce="%request.eid1%" src="js/layout_2_slide_1_elements_1.js"></script>
+  <script nonce="%request.eid1%" src="js/layout_3.js"></script>
+  <script nonce="%request.eid1%" src="js/layout_3_slide_1.js"></script>
+  <script nonce="%request.eid1%" src="js/layout_3_slide_1_elements_1.js"></script>
+</head>
+<body>
+  <div id="canvas" role="link" tabindex="0" aria-label="Перейти по ссылке рекламного объявления"></div>
+
+  <script nonce="%request.eid1%" src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+  <script nonce="%request.eid1%" src="js/resize_state.js"></script>
+  <script nonce="%request.eid1%" src="js/script.js"></script>
+  <script nonce="%request.eid1%" src="js/center_overlay.js"></script>
+  <script nonce="%request.eid1%">
+(function () {
+  var banner = document.getElementById("canvas");
+  if (!banner) return;
+
+  banner.style.cursor = "pointer";
+  banner.addEventListener("click", function (event) {
+    if (event.button !== 0 || typeof window.callClick !== "function") return;
+    event.preventDefault();
+    window.callClick();
+  });
+  banner.addEventListener("keydown", function (event) {
+    if ((event.key !== "Enter" && event.key !== " ") || typeof window.callClick !== "function") return;
+    event.preventDefault();
+    window.callClick();
+  });
+})();
+  </script>
+</body>
+</html>
