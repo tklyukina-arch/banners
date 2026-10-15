@@ -1,0 +1,97 @@
+@font-face{font-family:"TTDrugs";src:url("fonts/TTDrugs-Regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:block}
+@font-face{font-family:"TTDrugs";src:url("fonts/TTDrugs-Bold.ttf") format("truetype");font-style:normal;font-weight:700;font-display:block}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:transparent;width:100%;overflow-x:hidden}
+.click-area{position:relative;display:flex;justify-content:center;align-items:center;width:100%;height:200px;overflow:hidden;cursor:pointer;background:#062829}
+.click-area::before,.click-area::after{content:"";position:absolute;left:0;right:0;height:1px;background:rgba(229,228,221,.78);z-index:9;pointer-events:none;opacity:0;animation:edgeReveal 15s linear infinite both}
+.click-area::before{top:0}.click-area::after{bottom:0}
+.banner{flex:none;position:relative;width:1200px;height:200px;overflow:hidden;background:#062829;font-family:"TTDrugs",Arial,sans-serif;color:#fff;isolation:isolate}
+.photo-zone{position:absolute;left:0;top:0;width:728px;height:100%;overflow:hidden;background:#062829;opacity:0;animation:photoReveal 15s linear infinite both}
+.photo{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;filter:brightness(.90) saturate(1.24) contrast(1.09)}
+.photo-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,34,39,.18),transparent 27%,transparent 78%,rgba(4,35,35,.48)),linear-gradient(0deg,rgba(0,12,16,.52),transparent 30%,rgba(0,24,24,.12) 90%)}
+
+.photo-zone::after{content:"";position:absolute;left:0;top:0;bottom:0;width:290px;background:linear-gradient(to right,#062829 0%,rgba(6,40,41,.98) 10%,rgba(6,40,41,.91) 23%,rgba(6,40,41,.70) 44%,rgba(6,40,41,.40) 67%,rgba(6,40,41,.12) 88%,rgba(6,40,41,0) 100%);pointer-events:none;z-index:1}
+.info-zone{position:absolute;left:728px;right:0;top:0;bottom:0;background:linear-gradient(118deg,#063233 0%,#05292b 62%,#062829 100%);opacity:0;animation:panelReveal 15s linear infinite both}
+.vertical-rule{position:absolute;left:726px;top:23px;width:1.5px;height:150px;background:#d6af62;opacity:0;transform-origin:50% 0%;animation:dividerDraw 15s linear infinite both}
+.logo{position:absolute;left:26px;top:21px;width:194px;height:auto;display:block;opacity:0;animation:logoReveal 15s linear infinite both}
+.project-title{position:absolute;left:758px;top:21px;font-weight:400;font-size:29px;line-height:34px;white-space:nowrap;letter-spacing:.05px;color:#f8edd1;opacity:0;animation:titleReveal 15s linear infinite both}
+.title-rule{position:absolute;left:758px;right:46px;top:67px;height:1.5px;background:#caa95d;opacity:0;transform-origin:0 50%;animation:shelfDraw 15s linear infinite both}
+.offer{position:absolute;left:758px;right:23px;top:77px;z-index:2;opacity:0;pointer-events:none;animation-duration:15s;animation-timing-function:linear;animation-iteration-count:infinite;animation-fill-mode:both}
+.offer .lead{display:block;color:#fff;font-weight:700;white-space:nowrap;line-height:1.10}
+.offer .sub{display:block;color:#ead39d;font-weight:400;white-space:nowrap;line-height:1.25;margin-top:6px}
+.offer-one{top:79px;animation-name:offer1}.offer-one .lead{font-size:43px}
+.offer-two{top:84px;animation-name:offer2}.offer-two .lead{font-size:28px}.offer-two .sub{font-size:24px}
+.offer-three{top:83px;animation-name:offer3}.offer-three .lead{font-size:42px}.offer-three .sub{font-size:29px}
+.legal-shade{position:absolute;z-index:3;left:50%;transform:translateX(-50%);bottom:0;width:1120px;max-width:calc(100% - 24px);height:27px;background:linear-gradient(90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.55) 5%,rgba(0,0,0,1) 12%,rgba(0,0,0,1) 88%,rgba(0,0,0,.55) 95%,rgba(0,0,0,0) 100%);opacity:0;animation:legalRevealShade 15s linear infinite both;pointer-events:none}
+.disclaimer{position:absolute;z-index:4;left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100% - 20px);bottom:3px;text-align:center;font-size:13.333333px;line-height:17px;white-space:nowrap;font-weight:400;color:#fff;letter-spacing:0;text-shadow:0 1px 2px rgba(0,0,0,.75);opacity:0;animation:legalRevealText 15s linear infinite both;pointer-events:none}
+@keyframes photoReveal{
+  0%,1.2%{opacity:0;transform:scale(1.012) translateY(3px)}
+  6.2%{opacity:1;transform:scale(1) translateY(0);animation-timing-function:ease-out}
+  93.2%{opacity:1;transform:scale(1) translateY(0);animation-timing-function:ease-in-out}
+  99.1%,100%{opacity:0;transform:scale(1.006) translateY(-2px)}
+}
+@keyframes panelReveal{0%,1.2%{opacity:0}6.3%{opacity:1;animation-timing-function:ease-out}93.2%{opacity:1;animation-timing-function:ease-in-out}99.1%,100%{opacity:0}}
+@keyframes logoReveal{
+  0%,2.1%{opacity:0;transform:translateY(7px)}
+  7.2%{opacity:1;transform:translateY(0);animation-timing-function:ease-out}
+  93.2%{opacity:1;transform:translateY(0);animation-timing-function:ease-in-out}
+  99.1%,100%{opacity:0;transform:translateY(-5px)}
+}
+@keyframes titleReveal{
+  0%,2.4%{opacity:0;transform:translateX(10px)}
+  7.6%{opacity:1;transform:translateX(0);animation-timing-function:ease-out}
+  93.2%{opacity:1;transform:translateX(0);animation-timing-function:ease-in-out}
+  99.1%,100%{opacity:0;transform:translateX(5px)}
+}
+@keyframes dividerDraw{
+  0%,3.6%{opacity:0;transform:scaleY(0)}
+  4.2%{opacity:1;transform:scaleY(0);animation-timing-function:cubic-bezier(.23,.85,.24,1)}
+  9.3%{opacity:1;transform:scaleY(1)}
+  93.2%{opacity:1;transform:scaleY(1)}
+  99.1%,100%{opacity:0;transform:scaleY(0)}
+}
+@keyframes shelfDraw{
+  0%,4.0%{opacity:0;transform:scaleX(0)}
+  4.8%{opacity:1;transform:scaleX(0);animation-timing-function:cubic-bezier(.23,.85,.24,1)}
+  9.7%{opacity:1;transform:scaleX(1)}
+  93.2%{opacity:1;transform:scaleX(1)}
+  99.1%,100%{opacity:0;transform:scaleX(0)}
+}
+@keyframes legalRevealShade{
+  0%,4.4%{opacity:0}
+  9.2%{opacity:.8;animation-timing-function:ease-out}
+  93.2%{opacity:.8;animation-timing-function:ease-in-out}
+  99.1%,100%{opacity:0}
+}
+@keyframes legalRevealText{
+  0%,4.4%{opacity:0}
+  9.2%{opacity:.8;animation-timing-function:ease-out}
+  93.2%{opacity:.8;animation-timing-function:ease-in-out}
+  99.1%,100%{opacity:0}
+}
+@keyframes edgeReveal{
+  0%,2.2%{opacity:0}
+  7.3%{opacity:1}
+  93.2%{opacity:1}
+  99.1%,100%{opacity:0}
+}
+@keyframes offer1{
+  0%,5.0%{opacity:0;transform:translateY(8px)}
+  10.2%{opacity:1;transform:translateY(0);animation-timing-function:cubic-bezier(.23,.85,.24,1)}
+  30.7%{opacity:1;transform:translateY(0);animation-timing-function:ease-in}
+  33.6%{opacity:0;transform:translateY(-6px)}
+  100%{opacity:0;transform:translateY(-6px)}
+}
+@keyframes offer2{
+  0%,32.5%{opacity:0;transform:translateY(8px)}
+  35.8%{opacity:1;transform:translateY(0);animation-timing-function:cubic-bezier(.23,.85,.24,1)}
+  56.6%{opacity:1;transform:translateY(0);animation-timing-function:ease-in}
+  59.5%{opacity:0;transform:translateY(-6px)}
+  100%{opacity:0;transform:translateY(-6px)}
+}
+@keyframes offer3{
+  0%,58.8%{opacity:0;transform:translateY(8px)}
+  62.2%{opacity:1;transform:translateY(0);animation-timing-function:cubic-bezier(.23,.85,.24,1)}
+  93.0%{opacity:1;transform:translateY(0);animation-timing-function:ease-in-out}
+  99.1%,100%{opacity:0;transform:translateY(-6px)}
+}
