@@ -1,0 +1,31 @@
+@font-face{font-family:"TTDrugs";src:url("fonts/TTDrugs-Regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:block}
+@font-face{font-family:"TTDrugs";src:url("fonts/TTDrugs-Bold.ttf") format("truetype");font-style:normal;font-weight:700;font-display:block}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;width:100%;background:transparent;overflow-x:hidden}
+.click-area{position:relative;display:flex;justify-content:center;align-items:center;width:100%;height:60px;overflow:hidden;cursor:pointer;background:#082b2b}
+.banner{position:relative;flex:0 0 320px;width:320px;height:60px;overflow:hidden;background:#082b2b;isolation:isolate;font-family:"TTDrugs",sans-serif;color:#fff}
+.ad-composition{position:absolute;inset:0;opacity:0;animation:adScene 13.5s linear infinite both;pointer-events:none}
+.photo-zone{position:absolute;left:0;top:0;width:135px;height:60px;overflow:hidden;background:#082b2b;z-index:1}
+.photo{display:block;width:135px;height:60px;object-fit:cover;filter:brightness(.90) saturate(1.13)}
+.photo-zone::before{content:"";position:absolute;left:0;top:0;width:102px;height:60px;background:linear-gradient(90deg,rgba(8,43,43,.98) 0%,rgba(8,43,43,.94) 12%,rgba(8,43,43,.82) 28%,rgba(8,43,43,.62) 46%,rgba(8,43,43,.38) 64%,rgba(8,43,43,.18) 82%,rgba(8,43,43,0) 100%);pointer-events:none;z-index:2}
+.photo-zone::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,24,26,.42) 0%,rgba(0,24,26,0) 55%);pointer-events:none;z-index:1}
+.info-panel{position:absolute;left:135px;top:0;width:185px;height:60px;background:linear-gradient(115deg,#073335 0%,#05292b 75%,#082b2b 100%)}
+.photo-panel-divider{position:absolute;left:134px;top:0;height:60px;width:1px;background:linear-gradient(180deg,rgba(209,175,104,0),rgba(209,175,104,.82) 15%,rgba(209,175,104,.75) 85%,rgba(209,175,104,0))}
+.logo{position:absolute;left:7px;bottom:7.1px;width:68px;height:auto;display:block;z-index:5}
+.project-name{position:absolute;left:144px;top:5px;font-size:11.6px;line-height:13px;font-weight:400;white-space:nowrap;letter-spacing:.05px;color:#e5be70;z-index:4}
+.gold-rule{position:absolute;left:144px;top:20px;height:1px;width:28px;background:#d0aa60;transform-origin:0 50%;animation:ruleDraw 13.5s linear infinite both;z-index:4}
+.offer{position:absolute;left:144px;right:7px;opacity:0;pointer-events:none;animation-duration:13.5s;animation-timing-function:linear;animation-iteration-count:infinite;animation-fill-mode:both;z-index:4}
+.offer-one{top:30px;animation-name:offer1}
+.offer-one .lead{font-weight:700;color:#fff;font-size:19px;line-height:24px;white-space:nowrap}
+.offer-two{top:23px;animation-name:offer2}
+.offer-two .lead{font-weight:700;color:#fff;font-size:11.2px;line-height:14px;white-space:nowrap}
+.offer-two .sub{font-weight:400;color:#e5be70;font-size:9.6px;line-height:13px;white-space:nowrap;display:block;margin-top:-2px}
+.legal-scene{position:absolute;inset:0;background:#082b2b;opacity:0;pointer-events:none;animation:legalScene 13.5s linear infinite both}
+.disclaimer{position:absolute;left:4px;top:19px;width:312px;height:37px;margin:0;padding:0;overflow:visible;font-family:"TTDrugs",sans-serif;font-style:normal;font-weight:400;font-size:8pt;line-height:11.4px;letter-spacing:-.2px;color:rgba(255,255,255,.70);white-space:normal;word-break:normal;overflow-wrap:normal;opacity:0;animation:legalCopy 13.5s linear infinite both}
+.technical-stripe{position:absolute;left:0;top:0;width:320px;height:18px;background:red;opacity:0;pointer-events:none;z-index:9}
+@keyframes adScene{0%{opacity:0}4.5%{opacity:1}49%{opacity:1}53%{opacity:0}100%{opacity:0}}
+@keyframes ruleDraw{0%,2%{transform:scaleX(0);opacity:0}5.9%{transform:scaleX(1);opacity:1}49%{transform:scaleX(1);opacity:1}53%{transform:scaleX(0);opacity:0}100%{transform:scaleX(0);opacity:0}}
+@keyframes offer1{0%,5%{opacity:0;transform:translateY(4px)}9%{opacity:1;transform:translateY(0)}25%{opacity:1;transform:translateY(0)}29%{opacity:0;transform:translateY(-3px)}100%{opacity:0;transform:translateY(-3px)}}
+@keyframes offer2{0%,29%{opacity:0;transform:translateY(4px)}33%{opacity:1;transform:translateY(0)}49%{opacity:1;transform:translateY(0)}53%{opacity:0;transform:translateY(-3px)}100%{opacity:0;transform:translateY(-3px)}}
+@keyframes legalScene{0%,52%{opacity:0}56%{opacity:1}96%{opacity:1}100%{opacity:0}}
+@keyframes legalCopy{0%,54%{opacity:0}58%{opacity:1}96%{opacity:1}100%{opacity:0}}
