@@ -1,0 +1,29 @@
+@font-face{font-family:"Century Gothic";src:url("fonts/Century-Gothic.ttf") format("truetype");font-style:normal;font-weight:400;font-display:block}
+@font-face{font-family:"Century Gothic";src:url("fonts/Century-Gothic-Bold.ttf") format("truetype");font-style:normal;font-weight:700;font-display:block}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;width:100%;background:transparent;overflow-x:hidden}
+.click-area{width:100%;height:60px;overflow:hidden;display:flex;align-items:flex-start;justify-content:center;position:relative;cursor:pointer;background:#0b3134}
+.banner{position:relative;flex:0 0 320px;width:320px;height:60px;overflow:hidden;background:#0b3134;isolation:isolate;font-family:"Century Gothic",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.frame{position:absolute;inset:0;overflow:hidden;opacity:0;background:#0b3134;pointer-events:none;animation-duration:17s;animation-iteration-count:infinite;animation-timing-function:linear;animation-fill-mode:both;will-change:opacity}
+.frame-1{animation-name:frameOne}
+.frame-2{animation-name:frameTwo}
+.frame-3{animation-name:frameThree}
+.frame-4{animation-name:frameFour}
+.photo-window{position:absolute;left:0;top:0;width:124px;height:60px;overflow:hidden;background:#0b3134;z-index:0}
+.photo-original{position:absolute;left:0;top:0;width:360px;height:60px;max-width:none;display:block;object-fit:fill}
+.split-rule{position:absolute;left:124px;top:0;width:1px;height:60px;background:#d9b471;z-index:1}
+.tavrida-logo{position:absolute;left:6px;top:32px;width:105px;height:24.8px;object-fit:contain;display:block;z-index:2}
+.copy{position:absolute;margin:0;padding:0;display:block;text-align:left;white-space:nowrap;z-index:3;overflow:visible;font-family:"Century Gothic",Arial,sans-serif}
+.name{font-size:12.15px;line-height:14.4px;letter-spacing:.15px;font-weight:400;color:#ead19c}
+.name-1{left:175px;top:6px;width:108px;height:16px}
+.name-2{left:137px;top:6px;width:177px;height:18px}
+.offer{font-weight:700;color:#fff}
+.offer-1{left:137px;top:27px;width:150px;height:24px;font-size:19.1px;line-height:22px;letter-spacing:-.35px}
+.offer-2a{left:137px;top:23px;width:180px;height:17px;font-size:13.2px;line-height:16px;letter-spacing:-.25px}
+.offer-2b{left:137px;top:42px;width:180px;height:16px;font-size:11.6px;line-height:14px;letter-spacing:-.35px;color:#ead19c}
+.legal{left:4px;top:19px;width:312px;height:37px;font-size:7.5pt;line-height:11.7px;letter-spacing:-.75px;font-weight:400;color:#fff;white-space:pre}
+.technical-stripe{position:absolute;left:0;top:0;width:320px;height:18px;background:#ff0000;opacity:0!important;pointer-events:none;z-index:9}
+@keyframes frameOne{0%{opacity:0}3%,21%{opacity:1}23.5%,100%{opacity:0}}
+@keyframes frameTwo{0%,20.5%{opacity:0}23.5%,41%{opacity:1}44%,100%{opacity:0}}
+@keyframes frameThree{0%,41%{opacity:0}44%,68%{opacity:1}71%,100%{opacity:0}}
+@keyframes frameFour{0%,68%{opacity:0}71%,96%{opacity:1}100%{opacity:0}}
