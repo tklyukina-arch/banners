@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",function(){var area=document.querySelector(".click-area");if(!area)return;area.addEventListener("click",function(e){if(e.button!==0)return;if(typeof window.callClick==="function")window.callClick()})});
+document.addEventListener("DOMContentLoaded",function(){var area=document.querySelector(".click-area");if(!area)return;area.addEventListener("click",function(e){if(typeof e.button==="number"&&e.button!==0)return;if(typeof window.callClick==="function")window.callClick();});});
