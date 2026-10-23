@@ -3,23 +3,23 @@
 @font-face{font-family:"GT Eesti Pro Display";src:url("fonts/gteestiprodisplay_regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:block}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;width:100%;background:transparent;overflow-x:hidden}
-.click-area{width:100%;height:60px;position:relative;overflow:hidden;cursor:pointer;background:#836646}
-.banner{width:320px;height:60px;position:absolute;left:50%;top:0;transform:translateX(-50%);overflow:hidden;isolation:isolate;background:#836646;font-family:"Circe",Arial,sans-serif}
+.click-area{width:100%;height:60px;position:relative;overflow:hidden;cursor:pointer;background:#A26337}
+.banner{width:320px;height:60px;position:absolute;left:50%;top:0;transform:translateX(-50%);overflow:hidden;isolation:isolate;background:#A26337;font-family:"Circe",Arial,sans-serif}
 .frame,.ad-stage{position:absolute;inset:0;width:320px;height:60px;overflow:hidden;opacity:0;pointer-events:none;animation-duration:19.5s;-webkit-animation-duration:19.5s;animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;animation-timing-function:linear;-webkit-animation-timing-function:linear;animation-fill-mode:both;-webkit-animation-fill-mode:both;will-change:opacity;backface-visibility:hidden}
-.ad-stage{background:#836646;animation-name:adStage;-webkit-animation-name:adStage}
+.ad-stage{background:#A26337;animation-name:adStage;-webkit-animation-name:adStage}
 .frame-3{animation-name:frameThree;-webkit-animation-name:frameThree}
 .frame-4{animation-name:frameFour;-webkit-animation-name:frameFour}
-.ad-photo{position:absolute;left:0;top:0;width:320px;height:60px;max-width:none;object-fit:fill;display:block;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent 0px,#000 15px,#000 calc(100% - 15px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0px,#000 15px,#000 calc(100% - 15px),transparent 100%);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.ad-photo{position:absolute;left:0;top:0;width:320px;height:60px;max-width:none;object-fit:fill;display:block;pointer-events:none}
 .tavrida-logo{opacity:0;animation:brandReveal 19.5s linear infinite both;-webkit-animation:brandReveal 19.5s linear infinite both;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 100%);-webkit-mask-size:300% 100%;mask-size:300% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;position:absolute;left:9px;top:36px;width:61px;height:16px;max-width:none;display:block;pointer-events:none}
 .project-name,.project-caption{opacity:0;animation:headerReveal 19.5s linear infinite both;-webkit-animation:headerReveal 19.5s linear infinite both;clip-path:inset(0 100% 0 0);filter:blur(2px);position:absolute;font-family:"Circe",Arial,sans-serif;font-weight:400;font-size:10px;line-height:14px;color:#fff;text-align:center;text-transform:uppercase;white-space:nowrap;margin:0;padding:0}
-.project-name{left:106px;top:5.23px;width:109px;height:14px}
-.project-dot{opacity:0;animation:dotReveal 17s linear infinite both;-webkit-animation:dotReveal 17s linear infinite both;position:absolute;left:159.33px;top:20.67px;width:2.268px;height:2.268px;border-radius:50%;background:#fff}
-.project-caption{left:101.46px;top:24.37px;width:118px;height:14px}
+.project-name{left:106px;top:5.87px;width:109px;height:14px}
+.project-divider{opacity:0;animation:dividerReveal 19.5s linear infinite both;-webkit-animation:dividerReveal 19.5s linear infinite both;position:absolute;left:151.463px;top:20.300px;width:18px;height:1px;background:#fff;pointer-events:none}
+.project-caption{left:101.46px;top:23.73px;width:118px;height:14px}
 .ad-badge{text-transform:uppercase;opacity:0;transform:scale(.99);filter:blur(1px);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 100%);-webkit-mask-size:300% 100%;mask-size:300% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;animation-duration:19.5s;-webkit-animation-duration:19.5s;animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;animation-timing-function:cubic-bezier(.22,.61,.36,1);-webkit-animation-timing-function:cubic-bezier(.22,.61,.36,1);animation-fill-mode:both;-webkit-animation-fill-mode:both;position:absolute;top:42px;height:14.52px;border-radius:1.891px;background:#fff;color:#916e50;font-family:"Circe",Arial,sans-serif;font-size:8px;line-height:normal;font-weight:800;display:flex;align-items:center;justify-content:center;text-align:center;padding:1.576px 4.728px .946px;white-space:nowrap;}
-.ad-badge span{display:block;white-space:nowrap;line-height:10px;}
+.ad-badge span{display:block;white-space:nowrap;line-height:10px;position:relative;top:1px;}
 .badge-first{left:123.2px;width:73.46px;animation-name:firstOfferMobile;-webkit-animation-name:firstOfferMobile}
 .badge-second{left:91.7px;width:136.46px;animation-name:secondOfferMobile;-webkit-animation-name:secondOfferMobile}
-.legal-frame{background:#836646}
+.legal-frame{background:#A26337}
 .legal-text{position:absolute;left:4px;top:19px;width:312px;height:37px;display:flex;flex-direction:column;justify-content:center;align-items:center;font-family:"GT Eesti Pro Display",Arial,sans-serif;font-weight:400;font-size:9px;line-height:9.9px;letter-spacing:.18px;text-align:center;color:rgba(255,255,255,.8);overflow:visible;}
 .legal-text span{display:block;max-width:312px;white-space:normal;}
 .legal-two .legal-line{white-space:nowrap;font-size:9px;line-height:9.9px;letter-spacing:.18px;}
@@ -31,7 +31,7 @@ html,body{margin:0;padding:0;width:100%;background:transparent;overflow-x:hidden
 @keyframes adStage{0%{opacity:0}2.615%{opacity:1}46.051%{opacity:1}51.282%{opacity:0}100%{opacity:0}}
 @keyframes brandReveal{0%,0.697%{opacity:0;-webkit-mask-position:0 0;mask-position:0 0}4.056%{opacity:.85;-webkit-mask-position:40% 0;mask-position:40% 0}10.764%,46.051%{opacity:1;-webkit-mask-position:100% 0;mask-position:100% 0}51.282%,100%{opacity:0;-webkit-mask-position:100% 0;mask-position:100% 0}}
 @keyframes headerReveal{0%,2.615%{opacity:0;clip-path:inset(0 100% 0 0);filter:blur(2px)}5.231%{opacity:.45;clip-path:inset(0 70% 0 0);filter:blur(1.2px)}10.897%,46.051%{opacity:1;clip-path:inset(0 0 0 0);filter:blur(0)}51.282%,100%{opacity:0;clip-path:inset(0 0 0 0);filter:blur(0)}}
-@keyframes dotReveal{0%,4.359%{opacity:0}10.897%,46.051%{opacity:1}51.282%,100%{opacity:0}}
+@keyframes dividerReveal{0%,4.359%{opacity:0}10.897%,46.051%{opacity:1}51.282%,100%{opacity:0}}
 @keyframes firstOfferMobile{0%,1.744%{opacity:0;transform:scale(.99);filter:blur(1px);-webkit-mask-position:0 0;mask-position:0 0}6.103%,23.026%{opacity:1;transform:scale(1);filter:blur(0);-webkit-mask-position:100% 0;mask-position:100% 0}25.641%{opacity:0;transform:scale(1.005);filter:blur(1px);-webkit-mask-position:100% 0;mask-position:100% 0}25.642%,100%{opacity:0;transform:scale(.99);filter:blur(1px);-webkit-mask-position:0 0;mask-position:0 0}}
 @keyframes secondOfferMobile{0%,23.026%{opacity:0;transform:scale(.99);filter:blur(1px);-webkit-mask-position:0 0;mask-position:0 0}29.128%,46.487%{opacity:1;transform:scale(1);filter:blur(0);-webkit-mask-position:100% 0;mask-position:100% 0}51.282%{opacity:0;transform:scale(1.005);filter:blur(1px);-webkit-mask-position:100% 0;mask-position:100% 0}51.283%,100%{opacity:0;transform:scale(.99);filter:blur(1px);-webkit-mask-position:0 0;mask-position:0 0}}
 @keyframes frameThree{0%,48.56410256%{opacity:0}51.17948718%,72.1025641%{opacity:1}74.71794872%,100%{opacity:0}}
@@ -39,7 +39,7 @@ html,body{margin:0;padding:0;width:100%;background:transparent;overflow-x:hidden
 @-webkit-keyframes adStage{0%{opacity:0}2.615%{opacity:1}46.051%{opacity:1}51.282%{opacity:0}100%{opacity:0}}
 @-webkit-keyframes brandReveal{0%,0.697%{opacity:0;-webkit-mask-position:0 0}4.056%{opacity:.85;-webkit-mask-position:40% 0}10.764%,46.051%{opacity:1;-webkit-mask-position:100% 0}51.282%,100%{opacity:0;-webkit-mask-position:100% 0}}
 @-webkit-keyframes headerReveal{0%,2.615%{opacity:0;clip-path:inset(0 100% 0 0);filter:blur(2px)}5.231%{opacity:.45;clip-path:inset(0 70% 0 0);filter:blur(1.2px)}10.897%,46.051%{opacity:1;clip-path:inset(0 0 0 0);filter:blur(0)}51.282%,100%{opacity:0;clip-path:inset(0 0 0 0);filter:blur(0)}}
-@-webkit-keyframes dotReveal{0%,4.359%{opacity:0}10.897%,46.051%{opacity:1}51.282%,100%{opacity:0}}
+@-webkit-keyframes dividerReveal{0%,4.359%{opacity:0}10.897%,46.051%{opacity:1}51.282%,100%{opacity:0}}
 @-webkit-keyframes firstOfferMobile{0%,1.744%{opacity:0;transform:scale(.99);filter:blur(1px);-webkit-mask-position:0 0}6.103%,23.026%{opacity:1;transform:scale(1);filter:blur(0);-webkit-mask-position:100% 0}25.641%{opacity:0;transform:scale(1.005);filter:blur(1px);-webkit-mask-position:100% 0}25.642%,100%{opacity:0;transform:scale(.99);filter:blur(1px);-webkit-mask-position:0 0}}
 @-webkit-keyframes secondOfferMobile{0%,23.026%{opacity:0;transform:scale(.99);filter:blur(1px);-webkit-mask-position:0 0}29.128%,46.487%{opacity:1;transform:scale(1);filter:blur(0);-webkit-mask-position:100% 0}51.282%{opacity:0;transform:scale(1.005);filter:blur(1px);-webkit-mask-position:100% 0}51.283%,100%{opacity:0;transform:scale(.99);filter:blur(1px);-webkit-mask-position:0 0}}
 @-webkit-keyframes frameThree{0%,48.56410256%{opacity:0}51.17948718%,72.1025641%{opacity:1}74.71794872%,100%{opacity:0}}
