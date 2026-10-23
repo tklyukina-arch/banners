@@ -1,0 +1,118 @@
+
+@font-face { font-family: "TT Runs DemiBold"; src: url("fonts/TT_Runs_DemiBold.ttf") format("truetype"); font-weight:600; font-style:normal; font-display:block; }
+@font-face { font-family:"PF Din Text Cond Pro"; src:url("fonts/PFDinTextCondPro-Medium.ttf") format("truetype"); font-weight:500; font-style:normal; font-display:block; }
+* { box-sizing:border-box; }
+html,body { margin:0; padding:0; width:100%; overflow-x:hidden; background:transparent; }
+.review-sheet { display:flex; flex-direction:column; align-items:center; gap:20px; padding:28px 14px 44px; }
+.review-item { width:320px; flex:0 0 auto; }
+.review-label { font:600 13px/18px Arial, sans-serif; color:#454952; margin:0 0 7px; letter-spacing:0.01em; }
+.banner { position:relative; width:320px; height:60px; overflow:hidden; background:white; margin:0 auto; }
+.orange-base { position:absolute; left:0; top:3px; width:320px; height:54px; background:#EF8505; z-index:1; }
+.frame { position:absolute; inset:0; z-index:2; display:block; }
+.photo { position:absolute; left:160px; top:3px; width:160px; height:54px; display:block; object-fit:fill; }
+.offer-line {
+  position:absolute; left:8px; width:148px; color:#fff;
+  font-family:"TT Runs DemiBold"; font-weight:600; text-align:left;
+  white-space:nowrap; letter-spacing:0; padding:0; margin:0;
+}
+/* Frame 1: 11px letter size, 11px line-to-line step; row 1 unchanged. */
+.frame-1 .line1 { top:20px; font-size:11px; line-height:12px; }
+.frame-1 .line2 { top:31px; font-size:11px; line-height:12px; }
+/* Frame 2: reduced to 11.5px / 11px with 12px leading */
+.frame-2 .line1 { top:20px; font-size:11.5px; line-height:12px; }
+.frame-2 .line2 { top:32px; font-size:11px; line-height:12px; }
+/* Legal block kept at 10px; arranged in 2 lines within x=4 y=19 w=312 h=37 */
+.legal {
+  position:absolute; left:4px; top:19px; width:312px; height:37px;
+  text-align:center; color:#fff; font-family:"PF Din Text Cond Pro";
+  font-style:normal; font-weight:500; font-size:10px; letter-spacing:0;
+}
+.legal-line {
+  position:absolute; left:0; display:block; width:312px; white-space:nowrap;
+  height:12px; line-height:12px; padding:0; margin:0;
+}
+.legal-line:nth-child(1) { top:1px; }
+.legal-line:nth-child(2) { top:13px; }
+.logo-plate { position:absolute; left:118px; width:84px; height:15px; background:#fff; z-index:3; pointer-events:none; }
+.logo-plate-top { top:0; border-radius:0 0 7px 7px; }
+.logo-plate-bottom { top:45px; border-radius:7px 7px 0 0; }
+.logo { position:absolute; display:block; object-fit:contain; z-index:4; pointer-events:none; }
+.logo-oblaka { left:137.5px; top:0; width:45px; height:15px; }
+.logo-neometria { left:127.1px; top:48.903px; width:65.8px; height:7.194px; }
+.technical-strip { position:absolute; left:0; top:0; width:320px; height:18px; background:#ff0000; opacity:0; z-index:10; pointer-events:none; }
+
+/* DEV DRAFT v04 — final legal-to-photo transition; v03 timing retained for ad scenes of approved static ART v04 and DEV DRAFT v02 motion.
+   T=17s; unchanged line motion: 9px / 0.8s / 0.18s stagger / cubic-bezier(.16,1,.3,1).
+   Full text holds: frame 1 0.98–4.58=3.60s; frame 2 5.91–9.31=3.40s;
+   legal fully visible 10.21–16.30; fades 16.30–16.65. Photo fades in 16.65–17.00; 17s reset is continuous.
+   No changes outside CSS motion and index.html title metadata. */
+.click-area{position:relative;width:100%;height:60px;cursor:pointer;overflow:hidden;background:#fff}
+.static-photo{position:absolute;left:160px;top:3px;width:160px;height:54px;display:block;object-fit:fill;z-index:2;pointer-events:none;
+ animation:photoVisibility 17s linear infinite both;-webkit-animation:photoVisibility 17s linear infinite both}
+.frame{opacity:0;animation-duration:17s;-webkit-animation-duration:17s;
+ animation-timing-function:linear;-webkit-animation-timing-function:linear;
+ animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;
+ animation-fill-mode:both;-webkit-animation-fill-mode:both;
+ pointer-events:none;backface-visibility:hidden}
+.frame-1{animation-name:frameOne;-webkit-animation-name:frameOne}
+.frame-2{animation-name:frameTwo;-webkit-animation-name:frameTwo}
+.frame-3{animation-name:frameThree;-webkit-animation-name:frameThree}
+.frame-1 .offer-line,.frame-2 .offer-line{opacity:0;transform:translateX(9px);
+ animation-duration:17s;-webkit-animation-duration:17s;
+ animation-timing-function:linear;-webkit-animation-timing-function:linear;
+ animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;
+ animation-fill-mode:both;-webkit-animation-fill-mode:both;
+ will-change:opacity,transform}
+.frame-1 .line1{animation-name:adOneLineOne;-webkit-animation-name:adOneLineOne}
+.frame-1 .line2{animation-name:adOneLineTwo;-webkit-animation-name:adOneLineTwo}
+.frame-2 .line1{animation-name:adTwoLineOne;-webkit-animation-name:adTwoLineOne}
+.frame-2 .line2{animation-name:adTwoLineTwo;-webkit-animation-name:adTwoLineTwo}
+/* Legal text stays an unmoving single group; only the parent frame fades. */
+@keyframes frameOne{
+  0.0000000%,26.9411765%{opacity:1} 30.4705882%{opacity:0} 97.9411765%{opacity:0} 100.0000000%{opacity:1}}
+
+@keyframes frameTwo{
+  0.0000000%,29.0000000%{opacity:0} 31.3529412%{opacity:1} 54.7647059%{opacity:1} 57.8235294%{opacity:0} 100.0000000%{opacity:0}}
+
+@keyframes frameThree{
+  0.0000000%,57.8235294%{opacity:0} 60.0588235%{opacity:1} 95.8823529%{opacity:1} 97.9411765%{opacity:0} 100.0000000%{opacity:0}}
+
+@keyframes photoVisibility{
+  0.0000000%,54.7647059%{opacity:1} 60.0588235%,97.9411765%{opacity:0} 100.0000000%{opacity:1}}
+
+@keyframes adOneLineOne{
+  0.0000000%{opacity:0;transform:translateX(9px);animation-timing-function:cubic-bezier(.16,1,.3,1)} 4.7058824%,30.4705882%{opacity:1;transform:translateX(0)} 30.4705941%,100.0000000%{opacity:0;transform:translateX(9px)}}
+
+@keyframes adOneLineTwo{
+  0.0000000%,1.0588235%{opacity:0;transform:translateX(9px)} 1.0588294%{opacity:0;transform:translateX(9px);animation-timing-function:cubic-bezier(.16,1,.3,1)} 5.7647059%,30.4705882%{opacity:1;transform:translateX(0)} 30.4705941%,100.0000000%{opacity:0;transform:translateX(9px)}}
+
+@keyframes adTwoLineOne{
+  0.0000000%,29.0000000%{opacity:0;transform:translateX(9px)} 29.0000059%{opacity:0;transform:translateX(9px);animation-timing-function:cubic-bezier(.16,1,.3,1)} 33.7058824%,57.8235294%{opacity:1;transform:translateX(0)} 57.8235353%,100.0000000%{opacity:0;transform:translateX(9px)}}
+
+@keyframes adTwoLineTwo{
+  0.0000000%,30.0588235%{opacity:0;transform:translateX(9px)} 30.0588294%{opacity:0;transform:translateX(9px);animation-timing-function:cubic-bezier(.16,1,.3,1)} 34.7647059%,57.8235294%{opacity:1;transform:translateX(0)} 57.8235353%,100.0000000%{opacity:0;transform:translateX(9px)}}
+
+@-webkit-keyframes frameOne{
+  0.0000000%,26.9411765%{opacity:1} 30.4705882%{opacity:0} 97.9411765%{opacity:0} 100.0000000%{opacity:1}}
+
+@-webkit-keyframes frameTwo{
+  0.0000000%,29.0000000%{opacity:0} 31.3529412%{opacity:1} 54.7647059%{opacity:1} 57.8235294%{opacity:0} 100.0000000%{opacity:0}}
+
+@-webkit-keyframes frameThree{
+  0.0000000%,57.8235294%{opacity:0} 60.0588235%{opacity:1} 95.8823529%{opacity:1} 97.9411765%{opacity:0} 100.0000000%{opacity:0}}
+
+@-webkit-keyframes photoVisibility{
+  0.0000000%,54.7647059%{opacity:1} 60.0588235%,97.9411765%{opacity:0} 100.0000000%{opacity:1}}
+
+@-webkit-keyframes adOneLineOne{
+  0.0000000%{opacity:0;transform:translateX(9px);animation-timing-function:cubic-bezier(.16,1,.3,1)} 4.7058824%,30.4705882%{opacity:1;transform:translateX(0)} 30.4705941%,100.0000000%{opacity:0;transform:translateX(9px)}}
+
+@-webkit-keyframes adOneLineTwo{
+  0.0000000%,1.0588235%{opacity:0;transform:translateX(9px)} 1.0588294%{opacity:0;transform:translateX(9px);animation-timing-function:cubic-bezier(.16,1,.3,1)} 5.7647059%,30.4705882%{opacity:1;transform:translateX(0)} 30.4705941%,100.0000000%{opacity:0;transform:translateX(9px)}}
+
+@-webkit-keyframes adTwoLineOne{
+  0.0000000%,29.0000000%{opacity:0;transform:translateX(9px)} 29.0000059%{opacity:0;transform:translateX(9px);animation-timing-function:cubic-bezier(.16,1,.3,1)} 33.7058824%,57.8235294%{opacity:1;transform:translateX(0)} 57.8235353%,100.0000000%{opacity:0;transform:translateX(9px)}}
+
+@-webkit-keyframes adTwoLineTwo{
+  0.0000000%,30.0588235%{opacity:0;transform:translateX(9px)} 30.0588294%{opacity:0;transform:translateX(9px);animation-timing-function:cubic-bezier(.16,1,.3,1)} 34.7647059%,57.8235294%{opacity:1;transform:translateX(0)} 57.8235353%,100.0000000%{opacity:0;transform:translateX(9px)}}
+
