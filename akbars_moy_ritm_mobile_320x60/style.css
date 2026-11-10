@@ -1,0 +1,39 @@
+@font-face{font-family:SuisseIntl;src:url("fonts/SuisseIntl-Regular.otf") format("opentype");font-weight:400;font-display:block}
+@font-face{font-family:SuisseIntl;src:url("fonts/SuisseIntl-Medium.otf") format("opentype");font-weight:500;font-display:block}
+@font-face{font-family:SuisseIntl;src:url("fonts/SuisseIntl-Bold.otf") format("opentype");font-weight:700;font-display:block}
+*{box-sizing:border-box}
+html,body{padding:0;margin:0;background:transparent;overflow:hidden}
+.click-area{height:60px;width:100%;background:#5e147b;overflow:hidden;display:flex;align-items:start;justify-content:center;cursor:pointer}
+.banner{position:relative;flex:0 0 320px;width:320px;height:60px;background:#5e147b;overflow:hidden;isolation:isolate}
+.frame{position:absolute;inset:0;width:320px;height:60px;overflow:hidden;opacity:0;animation-fill-mode:both;-webkit-animation-fill-mode:both}
+.frame-ad{z-index:1;animation:adCycle 14s ease-in-out infinite both;-webkit-animation:adCycle 14s ease-in-out infinite both}
+.photo{position:absolute;top:-18.800px;left:124.700px;width:233.392px;height:110.422px;object-fit:cover;max-width:none;transform-origin:50% 50%;z-index:0;opacity:0;animation:photoCycle 14s cubic-bezier(.22,.61,.36,1) infinite both;-webkit-animation:photoCycle 14s cubic-bezier(.22,.61,.36,1) infinite both}
+.gradient-extra{position:absolute;z-index:1;left:112.8px;top:0;width:105.3px;height:60px;pointer-events:none;background:linear-gradient(270deg,rgba(177,46,237,0) 0%,#5e147b 95.648%)}
+.gradient-left{position:absolute;z-index:2;left:90px;top:0;width:141px;height:60px;pointer-events:none;background:linear-gradient(269.9675deg,rgba(161,50,203,0) 0%,rgba(110,44,126,.745192289) 47.471%,#5e147b 86.928%)}
+.gradient-right{position:absolute;z-index:4;right:0;top:0;width:45px;height:60px;pointer-events:none;background:linear-gradient(90deg,rgba(161,50,203,0) 0%,rgba(110,44,126,.745192289) 47.471%,#5e147b 86.928%)}
+.logo{position:absolute;z-index:5;display:block;opacity:0;animation-fill-mode:both;-webkit-animation-fill-mode:both}
+.logo-left{left:.3833px;top:20px;width:23.1px;height:23.1px;animation:logoLeftCycle 14s cubic-bezier(.22,.61,.36,1) infinite both;-webkit-animation:logoLeftCycle 14s cubic-bezier(.22,.61,.36,1) infinite both}
+.logo-right{left:298.1px;top:37px;width:21.23px;height:18.14px;object-fit:contain;animation:logoRightCycle 14s cubic-bezier(.22,.61,.36,1) infinite both;-webkit-animation:logoRightCycle 14s cubic-bezier(.22,.61,.36,1) infinite both}
+.headline{position:absolute;z-index:5;left:39px;top:16px;white-space:nowrap;font:500 12.403px/1.43 SuisseIntl,Arial,sans-serif;color:#fff;opacity:0;animation:titleCycle 14s cubic-bezier(.22,.61,.36,1) infinite both;-webkit-animation:titleCycle 14s cubic-bezier(.22,.61,.36,1) infinite both}
+.price-pill{position:absolute;z-index:5;left:39px;top:36.9825px;width:117.3345px;height:18.0177px;border-radius:10.522px;background:#fff;overflow:visible;display:flex;justify-content:center;align-items:center;opacity:0;animation:priceCycle 14s cubic-bezier(.22,.61,.36,1) infinite both;-webkit-animation:priceCycle 14s cubic-bezier(.22,.61,.36,1) infinite both}
+.price-text{font-family:SuisseIntl,Arial,sans-serif;font-weight:700;font-size:10.38px;line-height:1.05;color:#7c19a9;white-space:nowrap;letter-spacing:0;display:block;padding-bottom:0.15px}
+.price-text .num{font-size:10.107px}
+.frame-legal{z-index:6;opacity:0;background:#5e147b;animation:legalFrameCycle 14s ease-in-out infinite both;-webkit-animation:legalFrameCycle 14s ease-in-out infinite both}
+.legal-copy{position:absolute;left:4px;top:18px;width:312px;max-height:none;height:37px;white-space:nowrap;overflow:visible;color:#f5caff;font:400 7.5pt/9px SuisseIntl,Arial,sans-serif;letter-spacing:-.25px;opacity:0;animation:legalTextCycle 14s ease-in-out infinite both;-webkit-animation:legalTextCycle 14s ease-in-out infinite both;-webkit-font-smoothing:antialiased;pointer-events:none}
+.legal-line{display:block;white-space:nowrap;height:9px}
+@keyframes adCycle{0%{opacity:0}2%,37%{opacity:1}44%,100%{opacity:0}}
+@-webkit-keyframes adCycle{0%{opacity:0}2%,37%{opacity:1}44%,100%{opacity:0}}
+@keyframes photoCycle{0%{opacity:0;transform:translateX(2px) scale(1.012)}6%{opacity:1;transform:translateX(1px) scale(1.005)}13%,34%{opacity:1;transform:translateX(0) scale(1)}41%,100%{opacity:0;transform:translateX(2px) scale(1.012)}}
+@-webkit-keyframes photoCycle{0%{opacity:0;-webkit-transform:translateX(2px) scale(1.012)}6%{opacity:1;-webkit-transform:translateX(1px) scale(1.005)}13%,34%{opacity:1;-webkit-transform:translateX(0) scale(1)}41%,100%{opacity:0;-webkit-transform:translateX(2px) scale(1.012)}}
+@keyframes logoLeftCycle{0%,1%{opacity:0;transform:translateY(3px)}8%,34%{opacity:1;transform:none}39%,100%{opacity:0;transform:translateY(-2px)}}
+@-webkit-keyframes logoLeftCycle{0%,1%{opacity:0;-webkit-transform:translateY(3px)}8%,34%{opacity:1;-webkit-transform:none}39%,100%{opacity:0;-webkit-transform:translateY(-2px)}}
+@keyframes logoRightCycle{0%,3%{opacity:0;transform:translateY(3px)}11%,34%{opacity:1;transform:none}39%,100%{opacity:0;transform:translateY(-2px)}}
+@-webkit-keyframes logoRightCycle{0%,3%{opacity:0;-webkit-transform:translateY(3px)}11%,34%{opacity:1;-webkit-transform:none}39%,100%{opacity:0;-webkit-transform:translateY(-2px)}}
+@keyframes titleCycle{0%,5%{opacity:0;transform:translateY(4px)}14%,34%{opacity:1;transform:none}39%,100%{opacity:0;transform:translateY(-2px)}}
+@-webkit-keyframes titleCycle{0%,5%{opacity:0;-webkit-transform:translateY(4px)}14%,34%{opacity:1;-webkit-transform:none}39%,100%{opacity:0;-webkit-transform:translateY(-2px)}}
+@keyframes priceCycle{0%,10%{opacity:0;transform:translateY(3px) scale(.97)}18%,30%{opacity:1;transform:none}33%{opacity:1;transform:scale(1.018)}35%{opacity:1;transform:none}39%,100%{opacity:0;transform:translateY(-2px)}}
+@-webkit-keyframes priceCycle{0%,10%{opacity:0;-webkit-transform:translateY(3px) scale(.97)}18%,30%{opacity:1;-webkit-transform:none}33%{opacity:1;-webkit-transform:scale(1.018)}35%{opacity:1;-webkit-transform:none}39%,100%{opacity:0;-webkit-transform:translateY(-2px)}}
+@keyframes legalFrameCycle{0%,40%{opacity:0}46%,93%{opacity:1}100%{opacity:0}}
+@-webkit-keyframes legalFrameCycle{0%,40%{opacity:0}46%,93%{opacity:1}100%{opacity:0}}
+@keyframes legalTextCycle{0%,42%{opacity:0;transform:translateY(3px)}49%,93%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-2px)}}
+@-webkit-keyframes legalTextCycle{0%,42%{opacity:0;-webkit-transform:translateY(3px)}49%,93%{opacity:1;-webkit-transform:none}100%{opacity:0;-webkit-transform:translateY(-2px)}}

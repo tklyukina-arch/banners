@@ -1,0 +1,2 @@
+"use strict";
+(function(){var el=document.querySelector('.click-area');if(!el)return;el.addEventListener('click',function(event){if(event.button!==0)return;if(typeof window.callClick==='function')window.callClick();});})();
