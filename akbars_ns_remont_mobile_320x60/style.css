@@ -1,0 +1,28 @@
+@font-face{font-family:Suisse;src:url("fonts/SuisseIntl-Regular.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:Suisse;src:url("fonts/SuisseIntl-Medium.otf") format("opentype");font-weight:500;font-display:swap}
+@font-face{font-family:Suisse;src:url("fonts/SuisseIntl-Bold.otf") format("opentype");font-weight:700;font-display:swap}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:transparent;min-width:320px}
+.click-area{width:100%;height:60px;overflow:hidden;display:flex;justify-content:center;background:#ff731f;cursor:pointer}
+.banner{width:320px;height:60px;flex:0 0 320px;position:relative;overflow:hidden;background:#ff731f;isolation:isolate}
+.frame{position:absolute;inset:0;overflow:hidden;animation-fill-mode:both}
+.frame-ad{z-index:1;animation:adFrame 13s ease-in-out infinite both}
+.frame-legal{z-index:2;background:#ff731f;animation:legalFrame 13s ease-in-out infinite both}
+.photo-slot{position:absolute;left:106px;top:0;width:214px;height:60px;overflow:hidden;background:transparent;-webkit-mask-image:none;mask-image:none}
+.picture{position:absolute;width:100%;height:100%;object-fit:cover;object-position:center center;animation:photoCycle 13s cubic-bezier(.22,.61,.36,1) infinite both}
+.gradient-left{display:none}
+.gradient-right{display:none}
+.logo-abd,.logo-ns,.heading,.price-pill,.sale-badge{position:absolute;display:block;animation-fill-mode:both}
+.logo-abd{left:1px;top:19px;width:26.1px;height:26.1px;animation:branding 13s ease-in-out infinite both}
+.logo-ns{left:290px;top:43px;width:24.895px;height:12.6px;z-index:6;animation:branding 13s ease-in-out infinite both}
+.heading{left:36px;top:15px;width:154px;height:17px;white-space:nowrap;color:#fff;font:500 14.109px/1.23 Suisse,Arial,sans-serif;z-index:5;animation:branding 13s ease-in-out infinite both}
+.price-pill{left:36px;top:36.224px;width:75.501px;height:14.613px;background:#fff;border-radius:10.234px;display:flex;align-items:center;justify-content:center;animation:priceCycle 13s ease-in-out infinite both}
+.price-pill span{font:700 10.095px/1.05 Suisse,Arial,sans-serif;color:#ea661e;white-space:nowrap;position:relative;top:-.25px}
+.sale-badge{left:112.72px;top:4.56px;width:78.288px;height:76.272px;object-fit:contain;z-index:4;animation:saleCycle 13s ease-in-out infinite both}
+.legal-copy{position:absolute;left:4px;top:19px;width:312px;height:37px;font:400 10px/11.5px Suisse,Arial,sans-serif;color:#ffe9d0;overflow:visible;overflow-wrap:normal;white-space:normal;animation:legalCopy 13s ease-in-out infinite both}
+@keyframes adFrame{0%,49%{opacity:1}60%,94%{opacity:0}100%{opacity:1}}
+@keyframes legalFrame{0%,55%{opacity:0}64%,94%{opacity:1}100%{opacity:0}}
+@keyframes photoCycle{0%,65%,100%{transform:translateX(4px) scale(1.035)}12%,56%{transform:translateX(0) scale(1)}}
+@keyframes branding{0%,3%,100%{opacity:0;transform:translateY(3px)}9%,55%{opacity:1;transform:translateY(0)}60%{opacity:0;transform:translateY(-1px)}}
+@keyframes priceCycle{0%,5%,100%{opacity:0;transform:translateY(2px) scale(.98)}12%,55%{opacity:1;transform:none}60%{opacity:0;transform:translateY(-1px)}}
+@keyframes saleCycle{0%,7%,100%{opacity:0;transform:scale(.975)}15%,55%{opacity:1;transform:none}60%{opacity:0;transform:scale(.995)}}
+@keyframes legalCopy{0%,57%,100%{opacity:0;transform:translateY(3px)}65%,94%{opacity:1;transform:none}}
