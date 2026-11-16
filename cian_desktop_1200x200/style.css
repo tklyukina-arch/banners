@@ -1,0 +1,259 @@
+
+@font-face{font-family:"SalmaPro Medium Narrow";src:url("fonts/SalmaproMediumnarrow.otf") format("opentype");font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:"Montserrat Source";src:url("fonts/Montserrat_Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:block}
+:root{--cycle:18s}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;min-height:200px;background:transparent}
+body{overflow-x:hidden}
+.click-area{width:100%;height:200px;min-width:1200px;background:#000;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer}
+.banner{position:relative;overflow:hidden;width:1200px;height:200px;flex:none;background:#000;isolation:isolate;color:#fff}
+.banner img{display:block;max-width:none;user-select:none;pointer-events:none}
+.banner>*{position:absolute;margin:0}
+/* Animate center-container at canvas x=600,y=100; original source 390f @30fps. */
+.light-glow{left:367px;top:-12px;width:493px;height:212px;background:url("images/black.png") center/100% 100% no-repeat;transform-origin:100% 0;opacity:0;animation:glowCycle var(--cycle) linear infinite both;z-index:1}
+.photo{left:859.6px;top:-20px;width:339.2px;height:240px;object-fit:cover;opacity:0;animation:photoCycle var(--cycle) linear infinite both;z-index:2}
+.logo-mask{left:0;top:20px;width:38px;height:160.3px;overflow:hidden;clip-path:inset(0);-webkit-mask-image:linear-gradient(#000,#000);mask-image:linear-gradient(#000,#000);z-index:5}
+.logo-kvs{position:absolute;left:1px;top:0;width:36px;height:160.3px;opacity:1;animation:logoKvsCycle var(--cycle) linear infinite both}
+.headline{left:64px;top:7px;width:579.5px;height:73px;color:white;font:500 60px/1.14 "SalmaPro Medium Narrow",sans-serif;letter-spacing:-.5px;white-space:nowrap;opacity:0;transform-origin:50% 50%;animation:headlineCycle var(--cycle) linear infinite both;z-index:6}
+.offer{font-family:"Montserrat Source",sans-serif;color:#fff;font-size:26px;font-weight:400;line-height:31.7px;letter-spacing:0;white-space:nowrap;opacity:0;animation-duration:var(--cycle);animation-iteration-count:infinite;animation-fill-mode:both;animation-timing-function:linear;z-index:6}
+.offer-1{left:66px;top:93px;width:640px;text-align:left;animation-name:offer1Cycle}
+.sparkle{left:718px;top:21px;width:51px;height:25px;opacity:0;transform:scaleX(.14);animation:sparkleCycle var(--cycle) linear infinite both;z-index:5}
+.logo-mark{left:718.2px;top:122.7px;width:58px;height:52px;opacity:0;animation:logoMarkCycle var(--cycle) linear infinite both;z-index:5}
+/* v1.0.1-r2: Stage-1 focused correction. Main logo M36 uses authentic rectangular clipping mask;
+   headline y fixed by Animate stage coordinates; selected motion curves are CSS bezier.
+   Remaining photo/legal/sparkle source-driven frame timings remain untouched. */
+@keyframes headlineCycle{
+ 0%{opacity:0;transform:translate(246.3px,56.95px) scale(1.5);animation-timing-function:cubic-bezier(.23,.15,.25,1)}
+ 4.0740743%{opacity:1;transform:translate(246.3px,56.95px) scale(1.5)}
+ 5%{opacity:1;transform:translate(246.3px,56.95px) scale(1.5);animation-timing-function:cubic-bezier(.43,.06,.58,.96)}
+ 10.777777778%{opacity:1;transform:translate(0,0) scale(1)}
+ 95%{opacity:1;transform:translate(0,0) scale(1);animation-timing-function:cubic-bezier(.55,0,.83,.43)}
+ 99.6296293%{opacity:0;transform:translate(0,60px) scale(1)}
+ 100%{opacity:0;transform:translate(0,60px) scale(1)}
+}
+
+@keyframes photoCycle{
+ 0%{opacity:0;animation-timing-function:linear}
+ 6.111112222%{opacity:0;animation-timing-function:linear}
+ 6.296297222%{opacity:0;animation-timing-function:linear}
+ 6.481482222%{opacity:0.0784;animation-timing-function:linear}
+ 6.666667222%{opacity:0.1536;animation-timing-function:linear}
+ 6.851852222%{opacity:0.2256;animation-timing-function:linear}
+ 7.037037222%{opacity:0.2944;animation-timing-function:linear}
+ 7.222222222%{opacity:0.36;animation-timing-function:linear}
+ 7.407407222%{opacity:0.4224;animation-timing-function:linear}
+ 7.592592222%{opacity:0.4816;animation-timing-function:linear}
+ 7.777777222%{opacity:0.5376;animation-timing-function:linear}
+ 7.962962222%{opacity:0.5904;animation-timing-function:linear}
+ 8.148147222%{opacity:0.64;animation-timing-function:linear}
+ 8.333332222%{opacity:0.6864;animation-timing-function:linear}
+ 8.518517222%{opacity:0.7296;animation-timing-function:linear}
+ 8.703702222%{opacity:0.7696;animation-timing-function:linear}
+ 8.888887222%{opacity:0.8064;animation-timing-function:linear}
+ 9.074072222%{opacity:0.84;animation-timing-function:linear}
+ 9.259257222%{opacity:0.8704;animation-timing-function:linear}
+ 9.444442222%{opacity:0.8976;animation-timing-function:linear}
+ 9.629627222%{opacity:0.9216;animation-timing-function:linear}
+ 9.814812222%{opacity:0.9424;animation-timing-function:linear}
+ 9.999997222%{opacity:0.96;animation-timing-function:linear}
+ 10.185182222%{opacity:0.9744;animation-timing-function:linear}
+ 10.370367222%{opacity:0.9856;animation-timing-function:linear}
+ 10.555552222%{opacity:0.9936;animation-timing-function:linear}
+ 10.740737222%{opacity:0.9984;animation-timing-function:linear}
+ 10.925929444%{opacity:1;animation-timing-function:linear}
+ 11.111114444%{opacity:1;animation-timing-function:linear}
+ 93.703702778%{opacity:1;animation-timing-function:linear}
+ 93.888887778%{opacity:1;animation-timing-function:linear}
+ 94.074072778%{opacity:0.93652;animation-timing-function:linear}
+ 94.259257778%{opacity:0.87513;animation-timing-function:linear}
+ 94.444442778%{opacity:0.81582;animation-timing-function:linear}
+ 94.629627778%{opacity:0.75858;animation-timing-function:linear}
+ 94.814812778%{opacity:0.70343;animation-timing-function:linear}
+ 94.999997778%{opacity:0.65036;animation-timing-function:linear}
+ 95.185182778%{opacity:0.59938;animation-timing-function:linear}
+ 95.370367778%{opacity:0.55047;animation-timing-function:linear}
+ 95.555552778%{opacity:0.50364;animation-timing-function:linear}
+ 95.740737778%{opacity:0.4589;animation-timing-function:linear}
+ 95.925922778%{opacity:0.41623;animation-timing-function:linear}
+ 96.111107778%{opacity:0.37565;animation-timing-function:linear}
+ 96.296292778%{opacity:0.33715;animation-timing-function:linear}
+ 96.481485%{opacity:0.30073;animation-timing-function:linear}
+ 96.66667%{opacity:0.26639;animation-timing-function:linear}
+ 96.851855%{opacity:0.23413;animation-timing-function:linear}
+ 97.03704%{opacity:0.20395;animation-timing-function:linear}
+ 97.222225%{opacity:0.17586;animation-timing-function:linear}
+ 97.40741%{opacity:0.14984;animation-timing-function:linear}
+ 97.592595%{opacity:0.12591;animation-timing-function:linear}
+ 97.77778%{opacity:0.10406;animation-timing-function:linear}
+ 97.962965%{opacity:0.08429;animation-timing-function:linear}
+ 98.14815%{opacity:0.0666;animation-timing-function:linear}
+ 98.333335%{opacity:0.05099;animation-timing-function:linear}
+ 98.51852%{opacity:0.03746;animation-timing-function:linear}
+ 98.703705%{opacity:0.02601;animation-timing-function:linear}
+ 98.88889%{opacity:0.01665;animation-timing-function:linear}
+ 99.074075%{opacity:0.00937;animation-timing-function:linear}
+ 99.25926%{opacity:0.00416;animation-timing-function:linear}
+ 99.444445%{opacity:0.00104;animation-timing-function:linear}
+ 99.62963%{opacity:0;animation-timing-function:linear}
+ 99.814815%{opacity:0;animation-timing-function:linear}
+ 100%{opacity:0;animation-timing-function:linear}
+}
+@keyframes logoKvsCycle{
+ 0%,6.296296522%{transform:translateX(39px);animation-timing-function:cubic-bezier(.18,.72,.30,1)}
+ 8.518518622%,95%{transform:translateX(0);animation-timing-function:cubic-bezier(.55,0,.83,.43)}
+ 99.6296293%,100%{transform:translateX(42px)}
+}
+
+@keyframes glowCycle{
+ 0%,7.407407222%{opacity:0;transform:scale(.3806);animation-timing-function:cubic-bezier(.333333,.666667,.666667,1)}
+ 11.481481522%,92.407407078%{opacity:1;transform:scale(1);animation-timing-function:cubic-bezier(.333333,0,.666667,.333333)}
+ 97.037037078%,100%{opacity:0;transform:scale(.27186)}
+}
+
+@keyframes offer1Cycle{
+ 0%,10.944444444%{opacity:0;transform:translateY(-10px);animation-timing-function:cubic-bezier(.32,.07,.28,1)}
+ 13.666666667%,35.944444444%{opacity:1;transform:translateY(0);animation-timing-function:cubic-bezier(.45,.03,.74,.94)}
+ 39.833333333%,100%{opacity:0;transform:translateY(10px)}
+}
+
+
+
+
+@keyframes logoMarkCycle{
+ 0%,10.370370144%{opacity:0;animation-timing-function:cubic-bezier(.18,.72,.33,1)}
+ 15.370370144%,91.666666389%{opacity:1;animation-timing-function:cubic-bezier(.46,0,.78,.8)}
+ 95.185185%,100%{opacity:0}
+}
+
+@keyframes sparkleCycle{
+ 0%{opacity:0;transform:scale(0.1409,1);animation-timing-function:linear}
+ 12.962964444%{opacity:0;transform:scale(0.1409,1);animation-timing-function:linear}
+ 13.147961667%{opacity:0;transform:scale(0.1409,1);animation-timing-function:linear}
+ 13.148149444%{opacity:1;transform:scale(0.1409,1);animation-timing-function:linear}
+ 13.333334444%{opacity:1;transform:scale(0.25163,1);animation-timing-function:linear}
+ 13.518519444%{opacity:1;transform:scale(0.35472,1);animation-timing-function:linear}
+ 13.703704444%{opacity:1;transform:scale(0.45018,1);animation-timing-function:linear}
+ 13.888889444%{opacity:1;transform:scale(0.538,1);animation-timing-function:linear}
+ 14.074074444%{opacity:1;transform:scale(0.61818,1);animation-timing-function:linear}
+ 14.259259444%{opacity:1;transform:scale(0.69072,1);animation-timing-function:linear}
+ 14.444444444%{opacity:1;transform:scale(0.75563,1);animation-timing-function:linear}
+ 14.629629444%{opacity:1;transform:scale(0.81291,1);animation-timing-function:linear}
+ 14.814814444%{opacity:1;transform:scale(0.86254,1);animation-timing-function:linear}
+ 14.999999444%{opacity:1;transform:scale(0.90454,1);animation-timing-function:linear}
+ 15.185184444%{opacity:1;transform:scale(0.93891,1);animation-timing-function:linear}
+ 15.370369444%{opacity:1;transform:scale(0.96564,1);animation-timing-function:linear}
+ 15.555554444%{opacity:1;transform:scale(0.98473,1);animation-timing-function:linear}
+ 15.740739444%{opacity:1;transform:scale(0.99618,1);animation-timing-function:linear}
+ 15.925924444%{opacity:1;transform:scale(1,1);animation-timing-function:linear}
+ 16.111109444%{opacity:1;transform:scale(1,1);animation-timing-function:linear}
+ 92.037037778%{opacity:1;transform:scale(1,1);animation-timing-function:linear}
+ 92.222222778%{opacity:1;transform:scale(1,1);animation-timing-function:linear}
+ 92.407407778%{opacity:1.00391;transform:scale(1.00274,1.00274);animation-timing-function:linear}
+ 92.592592778%{opacity:1.0143;transform:scale(1.01001,1.01001);animation-timing-function:linear}
+ 92.777777778%{opacity:1.02914;transform:scale(1.0204,1.0204);animation-timing-function:linear}
+ 92.962962778%{opacity:1.0464;transform:scale(1.03248,1.03248);animation-timing-function:linear}
+ 93.148147778%{opacity:1.06406;transform:scale(1.04484,1.04484);animation-timing-function:linear}
+ 93.333332778%{opacity:1.0801;transform:scale(1.05607,1.05607);animation-timing-function:linear}
+ 93.518517778%{opacity:1.09249;transform:scale(1.06474,1.06474);animation-timing-function:linear}
+ 93.703702778%{opacity:1.0992;transform:scale(1.06944,1.06944);animation-timing-function:linear}
+ 93.888887778%{opacity:1.09821;transform:scale(1.06875,1.06875);animation-timing-function:linear}
+ 94.074072778%{opacity:1.0875;transform:scale(1.06125,1.06125);animation-timing-function:linear}
+ 94.259257778%{opacity:1.06504;transform:scale(1.04553,1.04553);animation-timing-function:linear}
+ 94.444442778%{opacity:1.0288;transform:scale(1.02016,1.02016);animation-timing-function:linear}
+ 94.629627778%{opacity:0.97676;transform:scale(0.98373,0.98373);animation-timing-function:linear}
+ 94.814812778%{opacity:0.9069;transform:scale(0.93483,0.93483);animation-timing-function:linear}
+ 94.999997778%{opacity:0.81719;transform:scale(0.87203,0.87203);animation-timing-function:linear}
+ 95.185182778%{opacity:0.7056;transform:scale(0.79392,0.79392);animation-timing-function:linear}
+ 95.370367778%{opacity:0.57011;transform:scale(0.69908,0.69908);animation-timing-function:linear}
+ 95.555552778%{opacity:0.4087;transform:scale(0.58609,0.58609);animation-timing-function:linear}
+ 95.740737778%{opacity:0.21934;transform:scale(0.45354,0.45354);animation-timing-function:linear}
+ 95.925922778%{opacity:0;transform:scale(0.3,0.3);animation-timing-function:linear}
+ 96.111107778%{opacity:0;transform:scale(0.3,0.3);animation-timing-function:linear}
+ 100%{opacity:0;transform:scale(0.3,0.3);animation-timing-function:linear}
+}
+
+/* STAGE2 v1.1: new scene content ONLY; Stage-1 base motion and source artwork unchanged. */
+@font-face{font-family:"Roboto Condensed Source Light";src:url("fonts/roboto_condensed_light.ttf") format("truetype");font-weight:300;font-style:normal;font-display:block}
+.offer2-block{left:66px;top:82px;width:630px;height:83px;opacity:0;animation:offer2Cycle var(--cycle) linear infinite both;z-index:6;pointer-events:none}
+.offer2-location{display:flex;align-items:center;gap:10px;height:32px;white-space:nowrap}
+.location-pin{width:21px;height:25px;flex:none;object-fit:contain}
+.offer2-location-text,.offer2-finish{margin:0;color:#fff;font:400 26px/31.7px "Montserrat Source",sans-serif;letter-spacing:0;white-space:nowrap}
+.offer2-finish{position:absolute;left:31px;top:37px}
+.mortgage-warning{position:absolute;left:0;width:1200px;height:24px;overflow:visible;white-space:nowrap;text-align:left;opacity:0;color:#fff;font:300 20px/24px "Roboto Condensed Source Light",sans-serif;text-transform:uppercase;animation:mortgageWarningCycle var(--cycle) linear infinite both;z-index:7;pointer-events:none}
+.mortgage-warning>span{display:inline-block;white-space:nowrap}
+.mortgage-warning-1{top:152px;letter-spacing:15.91px}
+.mortgage-warning-2{top:176px;letter-spacing:8.729199px}
+.legal-stage3{left:66px;top:86px;width:635px;height:108px;overflow:visible;opacity:0;color:#fff;font:400 15px/18px "Montserrat Source",sans-serif;letter-spacing:0;animation:stage3LegalCycle var(--cycle) linear infinite both;z-index:7}
+.legal-stage3 p{margin:0 0 4px 0;white-space:normal;overflow-wrap:normal;hyphens:none}
+@keyframes mortgageWarningCycle{
+ 0%,10.944444444%{opacity:0;animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 16.5%,35.944444444%{opacity:.8;animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 39.833333333%,100%{opacity:0}
+}
+@keyframes offer2Cycle{
+ 0%,39.833333333%{opacity:0;transform:translateY(-10px);animation-timing-function:cubic-bezier(.32,.07,.28,1)}
+ 42.777777778%,55.555555556%{opacity:1;transform:translateY(0);animation-timing-function:cubic-bezier(.45,.03,.74,.94)}
+ 58.055555556%,100%{opacity:0;transform:translateY(10px)}
+}
+@keyframes stage3LegalCycle{
+ 0%,58.055555556%{opacity:0;transform:translateY(-6px);animation-timing-function:cubic-bezier(.32,.07,.28,1)}
+ 62.222222222%,91.666666667%{opacity:1;transform:translateY(0);animation-timing-function:cubic-bezier(.45,.03,.74,.94)}
+ 96.055555556%,100%{opacity:0;transform:translateY(8px)}
+}
+
+
+/* TASK 19 v1.2 STAGE 2 — user-requested targeted changes only; period stays 13s. */
+/* Photo file swapped at identical 848x600 native size; .photo geometry/motion remain unchanged. */
+/* Warning panel is below the text but above all imagery; synchronized with warnings. */
+.mortgage-backdrop{position:absolute;left:0;top:152px;width:1200px;height:48px;background:rgba(0,0,0,.65);opacity:0;z-index:6;pointer-events:none;animation:mortgageBackdropCycle var(--cycle) linear infinite both}
+@keyframes mortgageBackdropCycle{
+ 0%,10.944444444%{opacity:0;animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 16.5%,35.944444444%{opacity:1;animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 39.833333333%,100%{opacity:0}
+}
+/* Scale the M36 MASK AND its SVG as one visual unit during the mortgage-warning scene.
+   Original internal logoKvsCycle (clipped slide-in/out) is untouched. */
+.logo-mask{transform-origin:top left;animation:logoMaskStage2Lift var(--cycle) linear infinite both}
+@keyframes logoMaskStage2Lift{
+ 0%,6.888888889%{transform:translateY(0) scale(1);animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 10.888888889%,39.833333333%{transform:translateY(-3px) scale(.79);animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 44.333333333%,100%{transform:translateY(0) scale(1)}
+}
+/* Keep KVS's approved fade cycle, add only a vertical lift for stage 1. */
+.logo-mark{animation:logoMarkCycle var(--cycle) linear infinite both,logoMarkStage2Lift var(--cycle) linear infinite both}
+@keyframes logoMarkStage2Lift{
+ 0%,6.888888889%{transform:translateY(0);animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 10.888888889%,39.833333333%{transform:translateY(-35px);animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 44.333333333%,100%{transform:translateY(0)}
+}
+/* Shift the existing scene-2 location/finishing GROUP together, preserving all spacing and offer2Cycle. */
+.offer2-block{top:96px}
+/* Exact five editable lines. 70% final text alpha when the original stage3LegalCycle is fully visible. */
+.legal-stage3{top:86px;width:650px;height:108px;font-size:16px;line-height:20px;overflow:visible}
+.legal-stage3 .legal-line{display:block;margin:0;opacity:.7;white-space:nowrap;overflow:visible;hyphens:none;overflow-wrap:normal}
+
+
+/* TASK 19 v1.7 QUICK: 18s; all keyframes up to 11.20s retain their absolute timing. */
+
+/* DEV v1.5: CSS-only WebKit compatibility candidate for the existing .offer-1 text layer.
+   Matches standard opacity/transform keyframes exactly; no new motion or layout rules.
+   Safari playback must still be verified in real Safari. */
+@-webkit-keyframes offer1Cycle{
+ 0%,10.944444444%{opacity:0;transform:translateY(-10px);animation-timing-function:cubic-bezier(.32,.07,.28,1)}
+ 13.666666667%,35.944444444%{opacity:1;transform:translateY(0);animation-timing-function:cubic-bezier(.45,.03,.74,.94)}
+ 39.833333333%,100%{opacity:0;transform:translateY(10px)}
+}
+.offer-1{
+  -webkit-animation-name:offer1Cycle;
+  -webkit-animation-duration:var(--cycle);
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-fill-mode:both;
+}
+@supports (-webkit-touch-callout:none){
+  .offer-1{
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    will-change:opacity,transform;
+  }
+}
