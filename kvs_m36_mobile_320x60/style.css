@@ -1,0 +1,154 @@
+/* TASK 22 STAGE1 v0.3: 8px text group offset, unified source legal, zero legal photo/glow. */
+@font-face{font-family:"Montserrat Source";src:url("fonts/Montserrat_Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:"SalmaPro Medium Narrow";src:url("fonts/SalmaproMediumnarrow.otf") format("opentype");font-weight:500;font-style:normal;font-display:block}
+:root{--cycle:17s}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;width:100%;min-height:60px;background:transparent}
+.click-area{position:relative;width:100%;height:60px;min-width:320px;background:#000;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer}
+.banner{position:relative;width:320px;height:60px;flex:none;overflow:hidden;background:#000;isolation:isolate;color:#fff}
+.layer{position:absolute;pointer-events:none;animation-duration:var(--cycle);animation-timing-function:linear;animation-iteration-count:infinite;animation-fill-mode:both;will-change:opacity}
+/* Original FLA photo instance x=216.4,y=-11.7, w=103.7,h=73.3; aspect preserved via cover. */
+.photo{left:216px;top:-12px;width:104px;height:74px;object-fit:cover;opacity:0;animation-name:photo;z-index:2}
+/* Original Symbol11 expands behind the photo, right edge x~216. Desktop also places blue to the photo's left. */
+.glow{left:91px;top:0;width:126px;height:54px;background:url("images/black.png") center/100% 100% no-repeat;mix-blend-mode:normal;transform-origin:100% 0%;opacity:0;animation-name:glow;z-index:1}
+/* FLA centercontainer mask is STATIONARY. Its M36 vector translates horizontally right->left on entry and reverses on exit. */
+.logo-mask{left:14px;top:18px;width:9px;height:38px;overflow:hidden;opacity:1;clip-path:inset(0);-webkit-clip-path:inset(0);z-index:7}
+.logo-m36{position:absolute;left:0;top:0;display:block;width:9px;height:38px;object-fit:contain;transform:translateX(10px);animation:logoSlide var(--cycle) linear infinite both;will-change:transform}
+.headline{left:33px;top:19px;margin:0;width:181px;height:20px;line-height:20px;color:#fff;font-family:"SalmaPro Medium Narrow",sans-serif;font-weight:500;font-size:16.3px;letter-spacing:0;white-space:nowrap;opacity:0;animation-name:headline;z-index:4}
+/* 10px=7.5pt is the mobile minimum. -0.12px spacing maintains close source text width. */
+.offer{margin:0;left:32px;top:40px;width:190px;height:15px;font:400 10px/15px "Montserrat Source",sans-serif;letter-spacing:-.12px;white-space:nowrap;color:#fff;opacity:0;z-index:6;transform:translateY(-3.5px)}
+.offer-first{display:flex;align-items:center;animation-name:first}
+.offer-first .location-pin{display:block;width:8.1px;height:9.6px;flex:0 0 auto;object-fit:contain;margin-right:3.9px}
+.offer-second{left:33px;animation-name:second}
+.star{left:190px;top:2px;width:22px;height:11px;opacity:0;transform-origin:center;animation-name:star;z-index:6}
+.star img{width:100%;height:100%;display:block}
+/* Exact original Mobile legal words preserved; outer legal block x4/y19/w312/h37; four visible lines fit x4..250. 
+   10px (7.5pt) Montserrat; source-like .40 alpha; -0.15px tracking; 9.25px leading.
+   Layout measured against local OTF. Browser glyph bounds remain NOT VERIFIED. */
+.legal{left:4px;top:19px;width:312px;height:37px;font:400 10px/9.25px "Montserrat Source",sans-serif;color:#FFFFFF;opacity:0;z-index:9;letter-spacing:-.15px;overflow:visible}
+.legal p{white-space:nowrap;margin:0;padding:0;max-width:246px;line-height:9.25px;font-size:10px}
+.legal-unified{animation-name:legalUnified}
+.kvs{left:254px;top:19px;width:35px;height:31px;opacity:0;animation-name:kvs;z-index:9}
+.preview-rule{display:none}
+
+@keyframes headline{
+ 0.0000000%{opacity:0;transform:translateY(0);animation-timing-function:cubic-bezier(.23,.15,.25,1)}
+ 3.9411765%{opacity:1;transform:translateY(0)}
+ 54.1176471%{opacity:1;transform:translateY(0);animation-timing-function:cubic-bezier(.45,.03,.74,.94)}
+ 57.3529412%{opacity:0;transform:translateY(-3px)}
+ 100.0000000%{opacity:0;transform:translateY(-3px)}
+}
+
+@keyframes photo{
+ 0.0000000%{opacity:0;transform:translateY(0)}
+ 4.2941176%{opacity:0;transform:translateY(0);animation-timing-function:cubic-bezier(.25,0,.5,1)}
+ 8.8235294%{opacity:1;transform:translateY(0)}
+ 54.3529412%{opacity:1;transform:translateY(0);animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 57.3529412%{opacity:0;transform:translateY(0)}
+ 100.0000000%{opacity:0;transform:translateY(0)}
+}
+
+@keyframes glow{
+ 0.0000000%{opacity:0;transform:scale(.3806)}
+ 5.8823529%{opacity:0;transform:scale(.3806);animation-timing-function:cubic-bezier(.333333,.666667,.666667,1)}
+ 10.7058824%{opacity:1;transform:scale(1)}
+ 53.8235294%{opacity:1;transform:scale(1);animation-timing-function:cubic-bezier(.333333,0,.666667,.333333)}
+ 57.3529412%{opacity:0;transform:scale(.79)}
+ 100.0000000%{opacity:0;transform:scale(.79)}
+}
+
+@keyframes logoSlide{
+ 0.0000000%{transform:translateX(10px)}
+ 3.0588235%{transform:translateX(10px);animation-timing-function:cubic-bezier(.42,0,1,1)}
+ 7.0000000%{transform:translateX(0)}
+ 53.5294118%{transform:translateX(0);animation-timing-function:cubic-bezier(0,0,.58,1)}
+ 57.3529412%{transform:translateX(10px)}
+ 100.0000000%{transform:translateX(10px)}
+}
+
+@keyframes first{
+ 0.0000000%{opacity:0;transform:translateY(-3.5px)}
+ 6.9411765%{opacity:0;transform:translateY(-3.5px);animation-timing-function:cubic-bezier(.18,.87,.30,1.16)}
+ 10.5294118%{opacity:1;transform:translateY(0)}
+ 27.5294118%{opacity:1;transform:translateY(0);animation-timing-function:cubic-bezier(.42,0,.74,1)}
+ 30.8235294%{opacity:0;transform:translateY(2.3px)}
+ 100.0000000%{opacity:0;transform:translateY(2.3px)}
+}
+
+@keyframes second{
+ 0.0000000%{opacity:0;transform:translateY(-3.5px)}
+ 30.1176471%{opacity:0;transform:translateY(-3.5px);animation-timing-function:cubic-bezier(.18,.87,.30,1.16)}
+ 34.2941176%{opacity:1;transform:translateY(0)}
+ 53.5294118%{opacity:1;transform:translateY(0);animation-timing-function:cubic-bezier(.42,0,.74,1)}
+ 57.3529412%{opacity:0;transform:translateY(3.5px)}
+ 100.0000000%{opacity:0;transform:translateY(3.5px)}
+}
+
+@keyframes star{
+ 0.0000000%{opacity:0;transform:scale(.14,1)}
+ 9.5294118%{opacity:0;transform:scale(.14,1);animation-timing-function:cubic-bezier(.6,0,1,1)}
+ 13.0588235%{opacity:1;transform:scale(1,1)}
+ 51.0000000%{opacity:1;transform:scale(1,1);animation-timing-function:cubic-bezier(.6,-.16,.83,.45)}
+ 55.7647059%{opacity:0;transform:scale(.3,.3)}
+ 100.0000000%{opacity:0;transform:scale(.3,.3)}
+}
+
+@keyframes legalUnified{
+ 0.0000000%{opacity:0}
+ 57.3529412%{opacity:0;animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 60.4117647%{opacity:1}
+ 96.1764706%{opacity:1;animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 99.1176471%{opacity:0}
+ 100.0000000%{opacity:0}
+}
+
+@keyframes kvs{
+ 0.0000000%{opacity:0}
+ 57.3529412%{opacity:0;animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 60.4117647%{opacity:1}
+ 96.1764706%{opacity:1;animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 99.1176471%{opacity:0}
+ 100.0000000%{opacity:0}
+}
+
+@-webkit-keyframes first{
+ 0.0000000%{opacity:0;transform:translateY(-3.5px)}
+ 6.9411765%{opacity:0;transform:translateY(-3.5px);animation-timing-function:cubic-bezier(.18,.87,.30,1.16)}
+ 10.5294118%{opacity:1;transform:translateY(0)}
+ 27.5294118%{opacity:1;transform:translateY(0);animation-timing-function:cubic-bezier(.42,0,.74,1)}
+ 30.8235294%{opacity:0;transform:translateY(2.3px)}
+ 100.0000000%{opacity:0;transform:translateY(2.3px)}
+}
+
+@-webkit-keyframes second{
+ 0.0000000%{opacity:0;transform:translateY(-3.5px)}
+ 30.1176471%{opacity:0;transform:translateY(-3.5px);animation-timing-function:cubic-bezier(.18,.87,.30,1.16)}
+ 34.2941176%{opacity:1;transform:translateY(0)}
+ 53.5294118%{opacity:1;transform:translateY(0);animation-timing-function:cubic-bezier(.42,0,.74,1)}
+ 57.3529412%{opacity:0;transform:translateY(3.5px)}
+ 100.0000000%{opacity:0;transform:translateY(3.5px)}
+}
+
+@-webkit-keyframes logoSlide{
+ 0.0000000%{transform:translateX(10px)}
+ 3.0588235%{transform:translateX(10px);animation-timing-function:cubic-bezier(.42,0,1,1)}
+ 7.0000000%{transform:translateX(0)}
+ 53.5294118%{transform:translateX(0);animation-timing-function:cubic-bezier(0,0,.58,1)}
+ 57.3529412%{transform:translateX(10px)}
+ 100.0000000%{transform:translateX(10px)}
+}
+
+.offer-first,.offer-second{-webkit-animation-duration:var(--cycle);-webkit-animation-iteration-count:infinite;-webkit-animation-fill-mode:both;-webkit-animation-timing-function:linear}
+.offer-first{-webkit-animation-name:first}.offer-second{-webkit-animation-name:second}
+.logo-m36{-webkit-animation:logoSlide var(--cycle) linear infinite both}
+@supports (-webkit-touch-callout:none){.offer-first,.offer-second{-webkit-backface-visibility:hidden;backface-visibility:hidden;will-change:opacity,transform}}
+
+@-webkit-keyframes legalUnified{
+ 0.0000000%{opacity:0}
+ 57.3529412%{opacity:0;animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 60.4117647%{opacity:1}
+ 96.1764706%{opacity:1;animation-timing-function:cubic-bezier(.42,0,.58,1)}
+ 99.1176471%{opacity:0}
+ 100.0000000%{opacity:0}
+}
+.legal-unified{-webkit-animation-name:legalUnified;-webkit-animation-duration:var(--cycle);-webkit-animation-timing-function:linear;-webkit-animation-fill-mode:both;-webkit-animation-iteration-count:infinite}
