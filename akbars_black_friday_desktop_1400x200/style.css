@@ -1,4 +1,4 @@
-@font-face{font-family:Suisse;src:url('fonts/SuisseIntl_Regular.otf') format('opentype');font-weight:400;font-display:block}
+@font-face{font-family:Suisse;src:url('fonts/SuisseIntl_Regular.otf') format('opentype');font-weight:400;font-display:swap}
 @font-face{font-family:Suisse;src:url('fonts/SuisseIntl_Medium.otf') format('opentype');font-weight:500;font-display:block}
 @font-face{font-family:'129 Kosmos';src:url('fonts/Kosmos129.ttf') format('truetype');font-weight:400;font-style:normal;font-display:block}
 *{box-sizing:border-box}html,body{margin:0;padding:0;background:transparent!important;overflow-x:hidden}.click-area{position:relative;width:100%;height:200px;background:#5c17b1;cursor:pointer;overflow:hidden}.banner{position:absolute;left:calc(50% - 700px);top:0;width:1400px;height:200px;margin:0;background:#5c17b1;overflow:hidden;isolation:isolate}.building-window{position:absolute;left:674px;top:0;width:626px;height:200px;overflow:hidden}.building{position:absolute;left:0;top:-40px;display:block;width:747px;height:auto;max-width:none;transform-origin:50% 50%;opacity:0;animation:photoRise 12.5s cubic-bezier(.22,.61,.36,1) infinite both;-webkit-animation:photoRise 12.5s cubic-bezier(.22,.61,.36,1) infinite both}
@@ -7,7 +7,7 @@
 .date-svg-first,.date-svg-second{position:absolute;display:block;max-width:none;object-fit:fill;overflow:visible;opacity:0;animation:dateEnter 12.5s infinite both;-webkit-animation:dateEnter 12.5s infinite both}
 .date-svg-first{left:462.85px;top:64.6px;width:121px;height:46px}
 .date-svg-second{left:592.55px;top:63.65px;width:54.65px;height:37px}
-.legal{position:absolute;left:216px;top:144px;width:386px;color:#f5caff;font:400 12px/12px Suisse,sans-serif;letter-spacing:-.24px;white-space:pre-line;opacity:0;animation:legalEnter 12.5s infinite both;-webkit-animation:legalEnter 12.5s infinite both}
+.legal{position:absolute;left:216px;top:130px;width:455px;color:rgba(255,255,255,.55);font:400 12px/12px Suisse,sans-serif;letter-spacing:-.24px;white-space:normal;opacity:0;animation:legalEnter 12.5s infinite both;-webkit-animation:legalEnter 12.5s infinite both}
 .label{position:absolute;left:845px;top:-10px;width:239px;height:239px;object-fit:contain;transform-origin:50% 53%;opacity:0;animation:labelMotion 12.5s infinite both;-webkit-animation:labelMotion 12.5s infinite both}
 @keyframes photoRise{0%{opacity:0;transform:translateY(32px)}3%{opacity:.17}9%{opacity:.78}20%{opacity:1;transform:translateY(0)}91.2%{opacity:1;transform:translateY(0);animation-timing-function:cubic-bezier(.45,0,.55,1)}100%{opacity:0;transform:translateY(-35px)}}
 @keyframes labelMotion{0%,5%{opacity:0;transform:scale(.86)}11%{opacity:1;transform:scale(1.045)}16%{opacity:1;transform:scale(1)}51%{opacity:1;transform:scale(1)}55%{opacity:1;transform:scale(1.065)}59%{opacity:1;transform:scale(1)}86.4%{opacity:1;transform:scale(1);animation-timing-function:cubic-bezier(.45,0,.55,1)}96%{opacity:0;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
@@ -21,3 +21,4 @@
 @-webkit-keyframes copyEnter{0%,3%{opacity:0;transform:translateY(8px)}13%{opacity:1;transform:translateY(0)}93%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
 @-webkit-keyframes dateEnter{0%,8%{opacity:0;transform:translateY(7px)}18%{opacity:1;transform:translateY(0)}93%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
 @-webkit-keyframes legalEnter{0%,10%{opacity:0}21%{opacity:1}93%{opacity:1}100%{opacity:0}}
+.legal-line{display:block;white-space:nowrap}
